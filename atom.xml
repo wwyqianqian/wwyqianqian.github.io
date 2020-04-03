@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>wwy&#39;s blog</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://wwyqianqian.github.io/"/>
+  <updated>2020-04-03T08:09:16.272Z</updated>
+  <id>https://wwyqianqian.github.io/</id>
+  
+  <author>
+    <name>wwyqianqian</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://wwyqianqian.github.io/2020/04/03/hello-world/"/>
+    <id>https://wwyqianqian.github.io/2020/04/03/hello-world/</id>
+    <published>2020-04-03T08:09:16.272Z</published>
+    <updated>2020-04-03T08:09:16.272Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
