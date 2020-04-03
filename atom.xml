@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2020-04-03T08:09:16.272Z</updated>
+  <updated>2020-04-03T13:19:33.796Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -18,20 +18,14 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="https://wwyqianqian.github.io/2020/04/03/hello-world/"/>
-    <id>https://wwyqianqian.github.io/2020/04/03/hello-world/</id>
-    <published>2020-04-03T08:09:16.272Z</published>
-    <updated>2020-04-03T08:09:16.272Z</updated>
+    <link href="https://wwyqianqian.github.io/2016/09/20/hello-world/"/>
+    <id>https://wwyqianqian.github.io/2016/09/20/hello-world/</id>
+    <published>2016-09-19T16:00:00.000Z</published>
+    <updated>2020-04-03T13:19:33.796Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          
-        
-      
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
     
     </summary>
     
