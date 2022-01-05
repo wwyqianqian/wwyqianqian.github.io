@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wwyqianqian.github.io/about/index.html</loc>
+    
+    <lastmod>2022-01-05T08:36:25.928Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wwyqianqian.github.io/tags/index.html</loc>
     
     <lastmod>2022-01-05T07:13:01.558Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>https://wwyqianqian.github.io/categories/index.html</loc>
     
     <lastmod>2022-01-05T07:13:01.352Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wwyqianqian.github.io/about/index.html</loc>
-    
-    <lastmod>2022-01-05T07:13:01.349Z</lastmod>
     
   </url>
   
