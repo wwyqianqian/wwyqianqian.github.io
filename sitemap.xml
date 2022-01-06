@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://wwyqianqian.github.io/2019/05/06/Use-real-gcc-on-macOS/</loc>
+    
+    <lastmod>2022-01-06T11:28:36.055Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://wwyqianqian.github.io/2016/01/01/Hexo-Theme-Snail/</loc>
+    
+    <lastmod>2022-01-06T11:20:18.702Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://wwyqianqian.github.io/photography/index.html</loc>
     
     <lastmod>2022-01-06T03:48:59.549Z</lastmod>
@@ -47,13 +61,6 @@
     <loc>https://wwyqianqian.github.io/categories/index.html</loc>
     
     <lastmod>2022-01-05T07:13:01.352Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://wwyqianqian.github.io/2019/11/01/Hexo-Theme-Snail/</loc>
-    
-    <lastmod>2022-01-05T07:13:01.324Z</lastmod>
     
   </url>
   
