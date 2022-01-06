@@ -236,6 +236,8 @@
                 
                     <a href="#hexo" title="hexo" rel="1">hexo</a>
                 
+                    <a href="#Sheffield" title="Sheffield" rel="1">Sheffield</a>
+                
             </div>
 
             <!-- 标签列表 -->
@@ -258,6 +260,32 @@
                         
                             <h3 class="post-subtitle">
                                 A succinct hexo theme.
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Sheffield">
+                    <span class="tag-text">Sheffield</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2022/01/06/Describe-and-evaluate-how-research-in-your-field-addresses-inequality/">
+                        <h2 class="post-title">
+                            Describe and evaluate how research in your field addresses inequality
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                My essay of Course ELTC ISS2021
                             </h3>
                         
                     </a>
@@ -433,6 +461,21 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
