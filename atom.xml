@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2022-03-01T10:02:02.236Z</updated>
+  <updated>2022-06-12T04:47:01.160Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Paper Reading: three literature reviews</title>
+    <link href="https://wwyqianqian.github.io/2022/06/12/Paper-Reading-three-literature-reviews/"/>
+    <id>https://wwyqianqian.github.io/2022/06/12/Paper-Reading-three-literature-reviews/</id>
+    <published>2022-06-12T04:32:38.000Z</published>
+    <updated>2022-06-12T04:47:01.160Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Gait-Recognition-Based-on-Deep-Learning-A-Survey&quot;&gt;&lt;a href=&quot;#Gait-Recognition-Based-on-Deep-Learning-A-Survey&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="中科院计算所" scheme="https://wwyqianqian.github.io/categories/%E4%B8%AD%E7%A7%91%E9%99%A2%E8%AE%A1%E7%AE%97%E6%89%80/"/>
+    
+    
+    <category term="human activity recognition (HAR)" scheme="https://wwyqianqian.github.io/tags/human-activity-recognition-HAR/"/>
+    
+    <category term="cognitive science" scheme="https://wwyqianqian.github.io/tags/cognitive-science/"/>
+    
+  </entry>
   
   <entry>
     <title>Paper: human activity recognition &lt;-&gt; cognitive science</title>

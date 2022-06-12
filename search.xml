@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Paper Reading: three literature reviews</title>
+      <link href="/2022/06/12/Paper-Reading-three-literature-reviews/"/>
+      <url>/2022/06/12/Paper-Reading-three-literature-reviews/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Gait-Recognition-Based-on-Deep-Learning-A-Survey"><a href="#Gait-Recognition-Based-on-Deep-Learning-A-Survey" class="headerlink" title="Gait Recognition Based on Deep Learning: A Survey"></a>Gait Recognition Based on Deep Learning: A Survey</h2><h6 id="CCS-Concepts-•-Computing-methodologies-→-Machine-learning-•-Security-and-privacy-→-Biometrics"><a href="#CCS-Concepts-•-Computing-methodologies-→-Machine-learning-•-Security-and-privacy-→-Biometrics" class="headerlink" title="CCS Concepts: • Computing methodologies → Machine learning; • Security and privacy → Biometrics;"></a>CCS Concepts: • Computing methodologies → Machine learning; • Security and privacy → Biometrics;</h6><h6 id="Additional-Key-Words-and-Phrases-Gait-recognition-biometrics-deep-learning"><a href="#Additional-Key-Words-and-Phrases-Gait-recognition-biometrics-deep-learning" class="headerlink" title="Additional Key Words and Phrases: Gait recognition, biometrics, deep learning"></a>Additional Key Words and Phrases: Gait recognition, biometrics, deep learning</h6><h3 id="1-INTRODUCTION"><a href="#1-INTRODUCTION" class="headerlink" title="1 INTRODUCTION"></a>1 INTRODUCTION</h3><h3 id="2-THEORETICAL-BACKGROUND"><a href="#2-THEORETICAL-BACKGROUND" class="headerlink" title="2 THEORETICAL BACKGROUND"></a>2 THEORETICAL BACKGROUND</h3><h4 id="2-1-Biometric-Identification"><a href="#2-1-Biometric-Identification" class="headerlink" title="2.1 Biometric Identification"></a>2.1 Biometric Identification</h4><h4 id="2-2-Deep-Learning-Approaches-Considered-for-Gait-Recognition"><a href="#2-2-Deep-Learning-Approaches-Considered-for-Gait-Recognition" class="headerlink" title="2.2 Deep Learning Approaches Considered for Gait Recognition"></a>2.2 Deep Learning Approaches Considered for Gait Recognition</h4><h4 id="2-3-Gait-Recognition"><a href="#2-3-Gait-Recognition" class="headerlink" title="2.3 Gait Recognition"></a>2.3 Gait Recognition</h4><h3 id="3-GAIT-RECOGNITION-THROUGH-DEEP-LEARNING-BASED-APPROACHES"><a href="#3-GAIT-RECOGNITION-THROUGH-DEEP-LEARNING-BASED-APPROACHES" class="headerlink" title="3 GAIT RECOGNITION THROUGH DEEP LEARNING-BASED APPROACHES"></a>3 GAIT RECOGNITION THROUGH DEEP LEARNING-BASED APPROACHES</h3><h4 id="3-1-Convolutional-Neural-Networks"><a href="#3-1-Convolutional-Neural-Networks" class="headerlink" title="3.1 Convolutional Neural Networks"></a>3.1 Convolutional Neural Networks</h4><h4 id="3-2-Capsule-Networks"><a href="#3-2-Capsule-Networks" class="headerlink" title="3.2 Capsule Networks"></a>3.2 Capsule Networks</h4><h4 id="3-3-Recurrent-Neural-Networks"><a href="#3-3-Recurrent-Neural-Networks" class="headerlink" title="3.3 Recurrent Neural Networks"></a>3.3 Recurrent Neural Networks</h4><h4 id="3-4-Autoencoders"><a href="#3-4-Autoencoders" class="headerlink" title="3.4 Autoencoders"></a>3.4 Autoencoders</h4><h4 id="3-5-Deep-Belief-Networks"><a href="#3-5-Deep-Belief-Networks" class="headerlink" title="3.5 Deep Belief Networks"></a>3.5 Deep Belief Networks</h4><h4 id="3-6-Generative-Adversarial-Networks"><a href="#3-6-Generative-Adversarial-Networks" class="headerlink" title="3.6 Generative Adversarial Networks"></a>3.6 Generative Adversarial Networks</h4><h4 id="3-7-Discussion"><a href="#3-7-Discussion" class="headerlink" title="3.7 Discussion"></a>3.7 Discussion</h4><h3 id="4-DATASETS"><a href="#4-DATASETS" class="headerlink" title="4 DATASETS"></a>4 DATASETS</h3><h3 id="5-CONCLUSIONS-AND-FUTURE-DIRECTIONS"><a href="#5-CONCLUSIONS-AND-FUTURE-DIRECTIONS" class="headerlink" title="5 CONCLUSIONS AND FUTURE DIRECTIONS"></a>5 CONCLUSIONS AND FUTURE DIRECTIONS</h3><h3 id="REFERENCES-140"><a href="#REFERENCES-140" class="headerlink" title="REFERENCES 140"></a>REFERENCES 140</h3><h2 id="A-Comprehensive-Report-on-Machine-Learning-based-Early-Detection-of-Alzheimer’s-Disease-using-Multi-modal-Neuroimaging-Data"><a href="#A-Comprehensive-Report-on-Machine-Learning-based-Early-Detection-of-Alzheimer’s-Disease-using-Multi-modal-Neuroimaging-Data" class="headerlink" title="A Comprehensive Report on Machine Learning-based Early Detection of Alzheimer’s Disease using Multi-modal Neuroimaging Data"></a>A Comprehensive Report on Machine Learning-based Early Detection of Alzheimer’s Disease using Multi-modal Neuroimaging Data</h2><h2 id="A-Survey-on-Deep-Learning-for-Human-Activity-Recognition"><a href="#A-Survey-on-Deep-Learning-for-Human-Activity-Recognition" class="headerlink" title="A Survey on Deep Learning for Human Activity Recognition"></a>A Survey on Deep Learning for Human Activity Recognition</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 中科院计算所 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> human activity recognition (HAR) </tag>
+            
+            <tag> cognitive science </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Paper: human activity recognition &lt;-&gt; cognitive science</title>
       <link href="/2022/03/01/Paper-human-activity-recognition-cognitive-science/"/>
       <url>/2022/03/01/Paper-human-activity-recognition-cognitive-science/</url>
