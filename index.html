@@ -292,8 +292,6 @@ CCS Concepts: • Computing methodologies → Machine learning; • Security and
                     
                       <a href="/tags/#human activity recognition (HAR)" title="human activity recognition (HAR)">human activity recognition (HAR)</a>
                     
-                      <a href="/tags/#cognitive science" title="cognitive science">cognitive science</a>
-                    
                 </div>
             
 
@@ -933,6 +931,21 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
