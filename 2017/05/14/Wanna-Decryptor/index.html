@@ -16,11 +16,11 @@
     <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
     <title>
         
-          Ubuntu - wwyqianqian
+          2017-05-12: Wanna Decryptor - wwyqianqian
         
     </title>
 
-    <link rel="canonical" href="https://wwyqianqian.github.io/2017/04/17/Ubuntu/">
+    <link rel="canonical" href="https://wwyqianqian.github.io/2017/05/14/Wanna-Decryptor/">
 
     <!-- Bootstrap Core CSS -->
     
@@ -109,21 +109,23 @@
                     <div class="post-heading">
                         <div class="tags">
                             
-                              <a class="tag" href="/tags/#Ubuntu" title="Ubuntu">Ubuntu</a>
+                              <a class="tag" href="/tags/#BTC" title="BTC">BTC</a>
+                            
+                              <a class="tag" href="/tags/#Cyber Security" title="Cyber Security">Cyber Security</a>
                             
                         </div>
-                        <h1>Ubuntu</h1>
-                        <h2 class="subheading">Ubuntu 虚拟机初步配置</h2>
+                        <h1>2017-05-12: Wanna Decryptor</h1>
+                        <h2 class="subheading">512 比特币 WannaCry 病毒勒索事件</h2>
                         <span class="meta">
                             Posted by wwyqianqian on
-                            2017-04-17
+                            2017-05-14
                         </span>
 
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">951</span> and
-                                Reading Time <span class="post-count">4</span> Minutes
+                                Words <span class="post-count">658</span> and
+                                Reading Time <span class="post-count">2</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -262,26 +264,23 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <blockquote>
-<p>  因为做 lab 需要 Linux 环境而不是 Unix，所以找奔腾袁大佬装了个 VirtualBox，我作为萌新刚入门，也就暂时将就着使用 Ubuntu吧，以后会尝试其他发行版的~</p>
+                <ul>
+<li><p>5.12晚上八九点，刷微博看到有同学因连接校园网被注入病毒，需支付比特币解锁电脑文件。<br>MikaLeong在知乎里<a href="https://www.zhihu.com/question/59765277/answer/168682746" target="_blank" rel="noopener">写道</a></p>
+<blockquote>
+<p>此次侵略各大计算机的 Wanna Decryptor 是一种基于加密的勒索软件，也被称为 WCRY，针对 Windows Vista，Windows 7 和 Windows 8 的 Windows 版本，旨在通过持有数据文件乃至整个计算机来向受害者敲诈金钱（比特币形式）。它使用 AES 和 RSA 加密方法，这意味着只能使用相应的唯一密钥来解密系统文件，由于这种勒索软件的加密强度很大，如果采用暴力破解，仍然需要极高的运算量，因此基本不可能成功解密。 该版本的 WannaCry 通过加密其所有文件来感染电脑，并通过 SMB 使用远程命令执行漏洞 MS17-010，将其分发到同一网络上的其他 Windows 计算机上。虽然微软在今年三月已经发布了该漏洞的补丁，但是还有一些 windows 使用者没有及时更新。MS17-010 也被称为“永恒之蓝”，与黑客组织 Shadowbrokers 有关。</p>
 </blockquote>
-<p><p> 装了 Ubuntu，需要配置一些什么呢？在这之前，要知道 apt-get 。Advanced Package Tool 是 Debian 及其派生发行版的软件包管理器（就像 npm，yarn），软件包管理系统是在电脑中自动安装、配制、卸载和升级软件包的工具组合。就比如：在终端机里输入 apt-get install <package>，这样系统会自动下载 <package> 以及所有的依赖包，同时进行包的安装。</p>
-<h1 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h1><p>没有 GUI 时候的好帮手，vim 酱！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install vim-gtk</span><br></pre></td></tr></table></figure></p>
-<h1 id="git"><a href="#git" class="headerlink" title="git"></a>git</h1><p>16.04 特性使用 <code>apt install &lt;包名&gt;</code> 替代了 <code>apt-get install &lt;包名&gt;</code>，来试试吧</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install git</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email&quot; xxx &quot;</span><br><span class="line">git config --global user.name &quot; xxx &quot;</span><br></pre></td></tr></table></figure>
-<p>push 的时候输入用户名密码就可以了。</p>
-<h1 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;default&#x2F;locale</span><br><span class="line">LANG&#x3D;&quot;en_US.UTF-8&quot;</span><br><span class="line">LANGUAGE&#x3D;&quot;en_US:en&quot;</span><br><span class="line"></span><br><span class="line">locale -a &#x2F;&#x2F; 查看更改后的系统语言变量，如果没安装 en_US 的 local</span><br><span class="line"></span><br><span class="line">sudo locale-gen en_US.UTF-8</span><br><span class="line"></span><br><span class="line">locale</span><br></pre></td></tr></table></figure>
-<h1 id="ss"><a href="#ss" class="headerlink" title="ss"></a>ss</h1><p>PPA，表示 Personal Package Archives，也就是个人软件包集。有很多软件因为种种原因，不能进入官方的 Ubuntu 软件仓库。 为了方便 Ubuntu 用户使用，launchpad.net 提供了 ppa，允许用户建立自己的软件仓库， 自由地上传软件。PPA 也被用来对一些打算进入 Ubuntu 官方仓库的软件，或者某些软件的新版本进行测试。</p>
-<p>PPA 上的软件极其丰富，如果 Ubuntu 官方仓库中缺少您需要的某款软件，可以去 PPA 上找找看。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:hzwhuang&#x2F;ss-qt5</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install shadowsocks-qt5</span><br></pre></td></tr></table></figure>
-<p>在图形界面里配置已有的账户，紧接着 Ubuntu 的网代 network proxy 也要我们手动图形界面设置。manual，8080，127.0.0.1，1080。<br><br>输入下面执行开机启动<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gnome-session-properties</span><br></pre></td></tr></table></figure><br>点击添加，在 command 那一行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;bin&#x2F;ss-qt5</span><br></pre></td></tr></table></figure><br>这样 chrome 可以放心享用啦 【参考<a href="http://www.jianshu.com/p/867b5b4451e4" target="_blank" rel="noopener">http://www.jianshu.com/p/867b5b4451e4</a> 】</p>
-<h1 id="Chrome"><a href="#Chrome" class="headerlink" title="Chrome"></a>Chrome</h1><p>【警告⚠️，接下来的这个将是反面教材】<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">我用了一个危险的下载源</span><br><span class="line">sudo wget https:&#x2F;&#x2F;repo.fdzh.org&#x2F;chrome&#x2F;google-chrome.list -P &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;</span><br><span class="line">导入 Google 软件公钥</span><br><span class="line">wget -q -O - https:&#x2F;&#x2F;dl.google.com&#x2F;linux&#x2F;linux_signing_key.pub  | sudo apt-key add -</span><br><span class="line">把可用列表进行更新</span><br><span class="line">sudo apt-get update</span><br><span class="line">安装 chrome</span><br><span class="line">sudo apt-get install google-chrome-stable</span><br><span class="line">启动 chrome</span><br><span class="line">&#x2F;usr&#x2F;bin&#x2F;google-chrome-stable</span><br></pre></td></tr></table></figure></p>
-<h1 id="telegram"><a href="#telegram" class="headerlink" title="telegram"></a>telegram</h1><p>这里还是 ppa 源<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:atareao&#x2F;telegram</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install telegram</span><br></pre></td></tr></table></figure><br>图形界面启动 telegram，需要配置。setting 里面 connection type 选第三个（TCP with custom socks5-proxy）。hostname 是 127.0.0.1，Port 是 1080（现在是 1086），用户名密码不用管。我 macOS 里面其实选第一个（Auto TCP if available or http）就好。</p>
-<h1 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;xxx@gmails.com&quot; 一路回车</span><br><span class="line">vim ..&#x2F;home&#x2F;wwy&#x2F;.ssh&#x2F;id_rsa.pub. 把公钥存 github 里面</span><br><span class="line">ssh -T git@github.com 验证成功（Hi xxx! You&#39;ve successfully authenticated, but GitHub does not provide shell access）与否，可惜报错，那么</span><br><span class="line">git remote -v 一下就行。</span><br><span class="line"></span><br><span class="line">之后克隆以这种格式：</span><br><span class="line">git clone git@github.com:wwyqianqian&#x2F;myctask.git</span><br><span class="line">修改https,变成 ssh：</span><br><span class="line">git remote set-url origin git@github.com:wwyqianqian&#x2F;myctask.git</span><br></pre></td></tr></table></figure>
-<p>好啦，以后免去一次次地输入用户名密码的麻烦啦！</p>
-<h1 id="screenfetch"><a href="#screenfetch" class="headerlink" title="screenfetch"></a>screenfetch</h1><p>超级喜欢在终端展示 linux 发行版 logo 神器 —-&gt; screenfetch！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-add-repository ppa:djcj&#x2F;screenfetch</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install screenfetch</span><br><span class="line">screenfetch</span><br></pre></td></tr></table></figure><br>开终端自动启动：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim ~&#x2F;.bashrc</span><br><span class="line">screenfetch  &#x2F;&#x2F;加在最末尾</span><br></pre></td></tr></table></figure></p>
-<h1 id="Screenshot-自带）"><a href="#Screenshot-自带）" class="headerlink" title="Screenshot(自带）"></a>Screenshot(自带）</h1><p>有基友跟我说 Ubuntu 没有截图软件，其实自带了 Screenshot 呀，支持三种截屏（全屏，窗口，自定义）。</p>
+</li>
+<li><p><a href="https://www.malwaretech.com/2017/05/how-to-accidentally-stop-a-global-cyber-attacks.html" target="_blank" rel="noopener">这篇英国小哥的也很有趣</a></p>
+</li>
+<li><p>那时候还没几人关注这事，顶多就几个 tg 群讨论来着，我甚至玩笑搬地后悔去年 12 月份没入 0.1 个加 5 倍杠杆。好多朋友甚至找到完整包开始虚拟机试毒，虽然是<a href="https://zh.wikipedia.org/wiki/%E4%BC%BA%E6%9C%8D%E5%99%A8%E8%A8%8A%E6%81%AF%E5%8D%80%E5%A1%8A" target="_blank" rel="noopener">SMB</a>好危险，虚拟机也蠕虫侵染咱 Mac 主力机，我萌新还是不要好奇了 qwq</p>
+</li>
+<li><p>第二天起床，感觉事情闹大了，各个学校发通知给处方解药，同时铁路公路、公安、街头显示屏等等都中枪···晚上滚回寝室好累，作为 512 没敢开备用机的 win7 小可怜，<br><br>我搞完 lab 直接热点，<br><br>开防火墙（不知道以前怎么关了）；<br><br>关 445，135 端口；<br><br>下补丁（三月包原来 win7 也会自动更新的）；<br><br>NSA 检查一下； <br><br>又卸载一些毒家桶； <br><br>emmmmm 差不多了···连校园网试试···好像没事（毒奶一口</p>
+</li>
+<li><p>这次应该是敲响警钟吧，没事儿就多备份（Google Drive、邮箱、gayhub、光盘刻录、u 盘只读）；没事儿也别瞎关自动更新。说起来微软挺厉害的：这次事情后，人们都在后悔、自责没备份没下补丁，又紧接着蜂拥去更 win10。</p>
+</li>
+<li><p>后记：啊我糊的东西上线了丢人啦 qwq···现在寝室外面听取蛙声一片，我感到生命之逝···</p>
+</li>
+</ul>
 
                 
                 <hr>
@@ -289,12 +288,12 @@
                 <ul class="pager">
                     
                     <li class="previous">
-                        <a href="/2017/05/14/Wanna-Decryptor/" data-toggle="tooltip" data-placement="top" title="2017-05-12: Wanna Decryptor">&larr; Previous Post</a>
+                        <a href="/2017/08/21/proxychains-privoxy/" data-toggle="tooltip" data-placement="top" title="proxychains & privoxy">&larr; Previous Post</a>
                     </li>
                     
                     
                     <li class="next">
-                        <a href="/2016/01/01/Hexo-Theme-Snail/" data-toggle="tooltip" data-placement="top" title="Hexo-Theme-Snail">Next Post &rarr;</a>
+                        <a href="/2017/04/17/Ubuntu/" data-toggle="tooltip" data-placement="top" title="Ubuntu">Next Post &rarr;</a>
                     </li>
                     
                 </ul>
@@ -346,17 +345,6 @@
 
     
       
-        <aside id="sidebar">
-          <div id="toc" class="toc-article">
-          <strong class="toc-title">Contents</strong>
-          
-            
-              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#vim"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">vim</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#git"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">git</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#编码"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">编码</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#ss"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">ss</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Chrome"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">Chrome</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#telegram"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">telegram</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#ssh"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">ssh</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#screenfetch"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">screenfetch</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#Screenshot-自带）"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">Screenshot(自带）</span></a></li></ol>
-            
-          
-          </div>
-        </aside>
-      
     
 
                 
@@ -381,8 +369,8 @@
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
     var disqus_shortname = "wwyqianqian";
-    var disqus_identifier = "https://wwyqianqian.github.io/2017/04/17/Ubuntu/";
-    var disqus_url = "https://wwyqianqian.github.io/2017/04/17/Ubuntu/";
+    var disqus_identifier = "https://wwyqianqian.github.io/2017/05/14/Wanna-Decryptor/";
+    var disqus_url = "https://wwyqianqian.github.io/2017/05/14/Wanna-Decryptor/";
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
