@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2022-06-17T02:03:56.200Z</updated>
+  <updated>2022-06-19T02:33:37.498Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -17,11 +17,24 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Paper: Advances in Multimodal Behavioral Analytics for Early Dementia Diagnosis: A Review</title>
+    <link href="https://wwyqianqian.github.io/2022/06/19/Paper-Advances-in-Multimodal-Behavioral-Analytics-for-Early-Dementia-Diagnosis-A-Review/"/>
+    <id>https://wwyqianqian.github.io/2022/06/19/Paper-Advances-in-Multimodal-Behavioral-Analytics-for-Early-Dementia-Diagnosis-A-Review/</id>
+    <published>2022-06-19T02:33:37.000Z</published>
+    <updated>2022-06-19T02:33:37.498Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Paper Reading: three literature reviews</title>
     <link href="https://wwyqianqian.github.io/2022/06/12/Paper-Reading-three-literature-reviews/"/>
     <id>https://wwyqianqian.github.io/2022/06/12/Paper-Reading-three-literature-reviews/</id>
     <published>2022-06-12T04:32:38.000Z</published>
-    <updated>2022-06-17T02:03:56.200Z</updated>
+    <updated>2022-06-17T02:06:03.020Z</updated>
     
     
       
@@ -93,6 +106,31 @@
     <category term="STEM" scheme="https://wwyqianqian.github.io/tags/STEM/"/>
     
     <category term="Gender equality" scheme="https://wwyqianqian.github.io/tags/Gender-equality/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>V2RayX</title>
+    <link href="https://wwyqianqian.github.io/2019/05/07/V2RayX/"/>
+    <id>https://wwyqianqian.github.io/2019/05/07/V2RayX/</id>
+    <published>2019-05-07T15:28:22.000Z</published>
+    <updated>2022-07-04T12:21:01.050Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;碎碎念&quot;&gt;&lt;a href=&quot;#碎碎念&quot; class=&quot;headerlink&quot; title=&quot;碎碎念&quot;&gt;&lt;/a&gt;碎碎念&lt;/h3&gt;&lt;p&gt;还有一个多小时就是 2019 Google I/O</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
+    
+    
+    <category term="proxy server" scheme="https://wwyqianqian.github.io/tags/proxy-server/"/>
     
   </entry>
   
