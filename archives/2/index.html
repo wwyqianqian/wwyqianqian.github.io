@@ -620,7 +620,7 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; wwyqianqian 2022 
+                    Copyright &copy; wwyqianqian 2023 
                     <br>
                     Powered by 
                     <a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">
@@ -738,6 +738,21 @@ Hexo-theme-snail is a succinct hexo theme. It has two colors, light and star, th
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
