@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>QianQian&#39;s Blog</title>
+  <icon>https://wwyqianqian.github.io/icon.png</icon>
+  <subtitle>欢迎来到千千的小站</subtitle>
+  <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://wwyqianqian.github.io/"/>
+  <updated>2023-06-26T15:47:27.156Z</updated>
+  <id>https://wwyqianqian.github.io/</id>
+  
+  <author>
+    <name>wwyqianqian</name>
+    <email>wwyqianqian1@gmail.com</email>
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的 2023（一）</title>
+    <link href="https://wwyqianqian.github.io/2023/06/23/my2023/"/>
+    <id>https://wwyqianqian.github.io/2023/06/23/my2023/</id>
+    <published>2023-06-23T06:51:05.000Z</published>
+    <updated>2023-06-26T15:47:27.156Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;1-前言&quot;&gt;&lt;a href=&quot;#1-前言&quot; class=&quot;headerlink&quot; title=&quot;1 前言&quot;&gt;&lt;/a&gt;1 前言&lt;/h3&gt;&lt;p&gt; 好像有已经一年时间没有更新自己的博客了，在香港读研这一年，我大部分时间都在赶 due</summary>
+        
+      
+    
+    
+    
+    <category term="碎碎念" scheme="https://wwyqianqian.github.io/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+    <category term="旅行" scheme="https://wwyqianqian.github.io/tags/%E6%97%85%E8%A1%8C/"/>
+    
+    <category term="年终总结" scheme="https://wwyqianqian.github.io/tags/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PEK to HKG</title>
+    <link href="https://wwyqianqian.github.io/2022/07/08/PEK-to-HKG/"/>
+    <id>https://wwyqianqian.github.io/2022/07/08/PEK-to-HKG/</id>
+    <published>2022-07-08T08:39:17.000Z</published>
+    <updated>2022-07-14T08:18:50.496Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;最近几周，历经了千辛万苦，我的香港逗留签总算办好了。考虑再三，今天千千终于买好了国泰航空 PEK-HKG 的直飞机票，而距离飞行还有 20</summary>
+        
+      
+    
+    
+    
+    <category term="polyu" scheme="https://wwyqianqian.github.io/categories/polyu/"/>
+    
+    
+    <category term="flight" scheme="https://wwyqianqian.github.io/tags/flight/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Paper Reading: three literature reviews</title>
+    <link href="https://wwyqianqian.github.io/2022/06/12/Paper-Reading-three-literature-reviews/"/>
+    <id>https://wwyqianqian.github.io/2022/06/12/Paper-Reading-three-literature-reviews/</id>
+    <published>2022-06-12T04:32:38.000Z</published>
+    <updated>2022-06-17T02:06:03.020Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Gait-Recognition-Based-on-Deep-Learning-A-Survey&quot;&gt;&lt;a href=&quot;#Gait-Recognition-Based-on-Deep-Learning-A-Survey&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="中科院计算所" scheme="https://wwyqianqian.github.io/categories/%E4%B8%AD%E7%A7%91%E9%99%A2%E8%AE%A1%E7%AE%97%E6%89%80/"/>
+    
+    
+    <category term="human activity recognition (HAR)" scheme="https://wwyqianqian.github.io/tags/human-activity-recognition-HAR/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Paper: human activity recognition &lt;-&gt; cognitive science</title>
+    <link href="https://wwyqianqian.github.io/2022/03/01/Paper-human-activity-recognition-cognitive-science/"/>
+    <id>https://wwyqianqian.github.io/2022/03/01/Paper-human-activity-recognition-cognitive-science/</id>
+    <published>2022-03-01T08:28:53.000Z</published>
+    <updated>2022-03-01T10:02:02.236Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;strong&gt;本文禁止任何形式转载和二次加工&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;《普适环境下的行为—认知关联分析方法研究》&quot;&gt;&lt;a href=&quot;#《普适环境下的行为—认知关联分析方法研究》&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="中科院计算所" scheme="https://wwyqianqian.github.io/categories/%E4%B8%AD%E7%A7%91%E9%99%A2%E8%AE%A1%E7%AE%97%E6%89%80/"/>
+    
+    
+    <category term="human activity recognition (HAR)" scheme="https://wwyqianqian.github.io/tags/human-activity-recognition-HAR/"/>
+    
+    <category term="cognitive science" scheme="https://wwyqianqian.github.io/tags/cognitive-science/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Describe and evaluate how research in your field addresses inequality</title>
+    <link href="https://wwyqianqian.github.io/2022/01/06/Describe-and-evaluate-how-research-in-your-field-addresses-inequality/"/>
+    <id>https://wwyqianqian.github.io/2022/01/06/Describe-and-evaluate-how-research-in-your-field-addresses-inequality/</id>
+    <published>2022-01-06T00:50:14.000Z</published>
+    <updated>2022-01-06T00:58:44.653Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;The field of computing has developed considerably over the years, and the huge popularity of short videos and taxi applications has</summary>
+        
+      
+    
+    
+    
+    <category term="Sheffield" scheme="https://wwyqianqian.github.io/categories/Sheffield/"/>
+    
+    
+    <category term="STEM" scheme="https://wwyqianqian.github.io/tags/STEM/"/>
+    
+    <category term="Gender equality" scheme="https://wwyqianqian.github.io/tags/Gender-equality/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>V2RayX</title>
+    <link href="https://wwyqianqian.github.io/2019/05/07/V2RayX/"/>
+    <id>https://wwyqianqian.github.io/2019/05/07/V2RayX/</id>
+    <published>2019-05-07T15:28:22.000Z</published>
+    <updated>2022-07-04T12:21:01.050Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;碎碎念&quot;&gt;&lt;a href=&quot;#碎碎念&quot; class=&quot;headerlink&quot; title=&quot;碎碎念&quot;&gt;&lt;/a&gt;碎碎念&lt;/h3&gt;&lt;p&gt;还有一个多小时就是 2019 Google I/O</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
+    
+    
+    <category term="proxy server" scheme="https://wwyqianqian.github.io/tags/proxy-server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Use real gcc on macOS</title>
+    <link href="https://wwyqianqian.github.io/2019/05/06/Use-real-gcc-on-macOS/"/>
+    <id>https://wwyqianqian.github.io/2019/05/06/Use-real-gcc-on-macOS/</id>
+    <published>2019-05-06T12:51:59.000Z</published>
+    <updated>2022-01-06T11:41:01.286Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;今天编译一段带有 &lt;code&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;/code&gt; 这样一个头文件的 c++ 代码时，遇到了报错 &lt;br/&gt;&lt;br&gt;&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
+    
+    
+    <category term="gcc" scheme="https://wwyqianqian.github.io/tags/gcc/"/>
+    
+    <category term="macOS" scheme="https://wwyqianqian.github.io/tags/macOS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python3 web crawler zhihu</title>
+    <link href="https://wwyqianqian.github.io/2019/02/13/Python3-web-crawler-zhihu/"/>
+    <id>https://wwyqianqian.github.io/2019/02/13/Python3-web-crawler-zhihu/</id>
+    <published>2019-02-13T02:01:52.000Z</published>
+    <updated>2022-01-06T12:05:35.423Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;免责声明：本项目代码遵循 &lt;code&gt;robots.txt&lt;/code&gt; 协议，并仅供个人学习 python 使用，且无实际用处。&lt;/p&gt;
+&lt;p&gt;这个迫真爬虫是年前用了和 req-ccnu 一样的方法写的（api + 模拟登陆），他们都有一个特点，就是处理 curl</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://wwyqianqian.github.io/categories/Python/"/>
+    
+    
+    <category term="Web crawler" scheme="https://wwyqianqian.github.io/tags/Web-crawler/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Fish shell</title>
+    <link href="https://wwyqianqian.github.io/2018/04/30/Fish-shell/"/>
+    <id>https://wwyqianqian.github.io/2018/04/30/Fish-shell/</id>
+    <published>2018-04-30T12:24:12.000Z</published>
+    <updated>2022-01-06T12:53:54.908Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;很扯淡的前言：本文是一篇很随意、很爆笑的文章。大概是前几天一个晚上，杰哥唐突说：“没有配置过的 zsh 就是 shit，甚至不如 bash，如果使用的是没有配置过的 zsh，那么你的人生令人难过，我是佛祖 我拯救你</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
+    
+    
+    <category term="fish shell" scheme="https://wwyqianqian.github.io/tags/fish-shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xperia XZ Premium</title>
+    <link href="https://wwyqianqian.github.io/2017/12/10/Xperia-XZ-Premium/"/>
+    <id>https://wwyqianqian.github.io/2017/12/10/Xperia-XZ-Premium/</id>
+    <published>2017-12-10T11:39:15.000Z</published>
+    <updated>2022-01-06T11:48:20.859Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;引子：这个月初，千千找欣欣帮忙，入了港版索尼的 XZP，到手裸奔玩了半天后，决定要给这个 4k 镜子配一些外壳、转换插头和贴膜。这篇文章主要是说 XZP 贴膜的事情。&lt;/p&gt;
+
+&lt;p&gt;因为是被人说成「小众？」的手机，我们几乎不可能会在路边或者街边店铺里，随便找人花 20￥</summary>
+        
+      
+    
+    
+    
+    <category term="碎碎念" scheme="https://wwyqianqian.github.io/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+    <category term="Sony" scheme="https://wwyqianqian.github.io/tags/Sony/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>proxychains &amp; privoxy</title>
+    <link href="https://wwyqianqian.github.io/2017/08/21/proxychains-privoxy/"/>
+    <id>https://wwyqianqian.github.io/2017/08/21/proxychains-privoxy/</id>
+    <published>2017-08-21T08:35:36.000Z</published>
+    <updated>2022-01-12T13:10:24.654Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;简述背景需求&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;昨晚要帮朋友在 terminal 里面跑个作业，我虽然打开了 1080，而且开了全局，但发现终端依旧需要配置，因为终端不支持 Socks5 代理，只支持 http</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
+    
+    
+    <category term="proxy server" scheme="https://wwyqianqian.github.io/tags/proxy-server/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2017-05-12: Wanna Decryptor</title>
+    <link href="https://wwyqianqian.github.io/2017/05/14/Wanna-Decryptor/"/>
+    <id>https://wwyqianqian.github.io/2017/05/14/Wanna-Decryptor/</id>
+    <published>2017-05-13T17:45:44.000Z</published>
+    <updated>2022-07-04T12:50:00.382Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;5.12晚上八九点，刷微博看到有同学因连接校园网被注入病毒，需支付比特币解锁电脑文件。&lt;br&gt;MikaLeong在知乎里&lt;a href=&quot;https://www.zhihu.com/question/59765277/answer/168682746&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="碎碎念" scheme="https://wwyqianqian.github.io/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+    
+    <category term="BTC" scheme="https://wwyqianqian.github.io/tags/BTC/"/>
+    
+    <category term="Cyber Security" scheme="https://wwyqianqian.github.io/tags/Cyber-Security/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu</title>
+    <link href="https://wwyqianqian.github.io/2017/04/17/Ubuntu/"/>
+    <id>https://wwyqianqian.github.io/2017/04/17/Ubuntu/</id>
+    <published>2017-04-16T16:07:10.000Z</published>
+    <updated>2022-02-12T07:21:49.747Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;  因为做 lab 需要 Linux 环境而不是 Unix，所以找奔腾袁大佬装了个 VirtualBox，我作为萌新刚入门，也就暂时将就着使用 Ubuntu吧，以后会尝试其他发行版的~&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;p&gt; 装了</summary>
+        
+      
+    
+    
+    
+    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
+    
+    
+    <category term="Ubuntu" scheme="https://wwyqianqian.github.io/tags/Ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Theme-Snail</title>
+    <link href="https://wwyqianqian.github.io/2016/01/01/Hexo-Theme-Snail/"/>
+    <id>https://wwyqianqian.github.io/2016/01/01/Hexo-Theme-Snail/</id>
+    <published>2016-01-01T14:02:12.000Z</published>
+    <updated>2022-01-06T11:39:58.951Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hexo-theme-snail&quot;&gt;&lt;a href=&quot;#hexo-theme-snail&quot; class=&quot;headerlink&quot; title=&quot;hexo-theme-snail&quot;&gt;&lt;/a&gt;hexo-theme-snail&lt;/h1&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

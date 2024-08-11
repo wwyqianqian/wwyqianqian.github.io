@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="baidu-site-verification" content="093lY4ziMu" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="description" content="wwyqianqian&#39;s blog">
+    <meta name="keyword"  content="wwy, wwyqianqian, wwyqianqian1, wwyqianqian2, wwyqianqian&#39;s blog">
+    <link rel="shortcut icon" href="/img/ironman-draw.png">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
+    <title>
+        
+          wwyqianqian
+        
+    </title>
+
+    <link rel="canonical" href="https://wwyqianqian.github.io/">
+
+    <!-- Bootstrap Core CSS -->
+    
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+
+    <!-- Custom CSS --> 
+    
+        
+<link rel="stylesheet" href="/css/dusign-light.css">
+
+        
+<link rel="stylesheet" href="/css/dusign-common-light.css">
+
+        
+<link rel="stylesheet" href="/css/font-awesome.css">
+
+        
+<link rel="stylesheet" href="/css/toc.css">
+
+        <!-- background effects end -->
+    
+    
+    <!-- Pygments Highlight CSS -->
+    
+<link rel="stylesheet" href="/css/highlight.css">
+
+
+    
+<link rel="stylesheet" href="/css/widget.css">
+
+
+    
+<link rel="stylesheet" href="/css/rocket.css">
+
+
+    
+<link rel="stylesheet" href="/css/signature.css">
+
+
+    
+<link rel="stylesheet" href="/css/fonts.googleapis.css">
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- photography -->
+    
+<link rel="stylesheet" href="/css/photography.css">
+
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="QianQian's Blog" type="application/atom+xml">
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- background effects start -->
+    
+    <!-- background effects end -->
+
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            
+                background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/img/header_img/home-bg-1-dark.jpg') 
+                /*config*/
+            
+        
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>QianQian&#39;s Blog</h1>
+                        <!--<hr class="small">-->
+                        <span id="subdusi" class="subheading">欢迎来到千千的小站</span>
+                    </div>
+                
+
+                </div>
+            </div>
+        </div>      
+    </div>
+
+    
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">QianQian&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+                <!-- Top -->
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<!-- Main Content -->
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2023/06/23/my2023/">
+                <h2 class="post-title">
+                    我的 2023（一）
+                </h2>
+                <h3 class="post-subtitle">
+                    
+                </h3>
+                <div class="post-content-preview">
+                    1 前言 好像有已经一年时间没有更新自己的博客了，在香港读研这一年，我大部分时间都在赶 due 和处理生活琐碎的杂事，加上看开了觉得没有什么好写的，便荒废了这个博客。本着再不写点什么博客就要长草了，友链要被好友移除了，和一个人在家过端午节无聊的这几种复杂的心态，终于，我打开电脑的 work/myhexo 目录准备写点什么。
+
+2 后疫情生活：三月大阪速通之行2.1突然的解封 1 月 8 日，......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2023-06-23
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#旅行" title="旅行">旅行</a>
+                    
+                      <a href="/tags/#年终总结" title="年终总结">年终总结</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2022/07/08/PEK-to-HKG/">
+                <h2 class="post-title">
+                    PEK to HKG
+                </h2>
+                <h3 class="post-subtitle">
+                    国泰航空北京直飞香港：行前准备和通关流程
+                </h3>
+                <div class="post-content-preview">
+                    前言最近几周，历经了千辛万苦，我的香港逗留签总算办好了。考虑再三，今天千千终于买好了国泰航空 PEK-HKG 的直飞机票，而距离飞行还有 20 天左右的时间。由于 COVID-19 的大流行，现在的出行也充满了不确定性，以及需要办理很多复杂的手续。因此，我需要提前了解一些当局政策，并且整理和记录下来，以免到时候自己手忙脚乱。
+网络参考资料
+ref: https://www.cathaypac......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2022-07-08
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#flight" title="flight">flight</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2022/06/12/Paper-Reading-three-literature-reviews/">
+                <h2 class="post-title">
+                    Paper Reading: three literature reviews
+                </h2>
+                <h3 class="post-subtitle">
+                    文献综述类别论文粗读
+                </h3>
+                <div class="post-content-preview">
+                    Gait Recognition Based on Deep Learning: A Survey
+CCS Concepts: • Computing methodologies → Machine learning; • Security and privacy → Biometrics;Additional Key Words and Phrases: Gait recognition,......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2022-06-12
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#human activity recognition (HAR)" title="human activity recognition (HAR)">human activity recognition (HAR)</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2022/03/01/Paper-human-activity-recognition-cognitive-science/">
+                <h2 class="post-title">
+                    Paper: human activity recognition <-> cognitive science
+                </h2>
+                <h3 class="post-subtitle">
+                    论文精读《普适环境下的行为—认知关联分析方法研究》
+                </h3>
+                <div class="post-content-preview">
+                    本文禁止任何形式转载和二次加工
+《普适环境下的行为—认知关联分析方法研究》通过阅读中科院计算所张迎伟老师的论文第一章，来了解整个课题组正在进行的工作和方向，并且学习相关概念和术语，对自己之后的任务进行一个全局的俯瞰，进而由整体到局部地定位自己之后的工作。
+1.1 选题的背景及意义
+认知健康与个体全生命周期的正常发展密切相关
+定义课题组研究对象：多动症儿童、老年痴呆患者
+
+
+认知能力评估面临重......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2022-03-01
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#human activity recognition (HAR)" title="human activity recognition (HAR)">human activity recognition (HAR)</a>
+                    
+                      <a href="/tags/#cognitive science" title="cognitive science">cognitive science</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2022/01/06/Describe-and-evaluate-how-research-in-your-field-addresses-inequality/">
+                <h2 class="post-title">
+                    Describe and evaluate how research in your field addresses inequality
+                </h2>
+                <h3 class="post-subtitle">
+                    My essay of Course ELTC ISS2021
+                </h3>
+                <div class="post-content-preview">
+                    The field of computing has developed considerably over the years, and the huge popularity of short videos and taxi applications has demonstrated the success of the Internet field, which thus seems ......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2022-01-06
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#STEM" title="STEM">STEM</a>
+                    
+                      <a href="/tags/#Gender equality" title="Gender equality">Gender equality</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2019/05/07/V2RayX/">
+                <h2 class="post-title">
+                    V2RayX
+                </h2>
+                <h3 class="post-subtitle">
+                    V2RayX 客户端跑 ss 的简易配置及踩坑记录
+                </h3>
+                <div class="post-content-preview">
+                    碎碎念还有一个多小时就是 2019 Google I/O 大会了，不得不感叹时间过的好快。五月谷歌，六月苹果，年复一年，技术不长反退，人也懒散起来。只好整理心情水水博客找点事情做。两年前看好友 kiri 就在搞 V2 的轮子，狗杰哥 这几天也突然安利我下载个客户端试试看，800 米体测过后点了盒马犒劳自己，饱餐后准备和他一起折腾迷之客户端。V2RayX 是 macOS 上面的 GUI。习惯性......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2019-05-07
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#proxy server" title="proxy server">proxy server</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2019/05/06/Use-real-gcc-on-macOS/">
+                <h2 class="post-title">
+                    Use real gcc on macOS
+                </h2>
+                <h3 class="post-subtitle">
+                    macOS 下使用 gcc 而非 clang 的设置
+                </h3>
+                <div class="post-content-preview">
+                    今天编译一段带有 #include &lt;bits/stdc++.h&gt; 这样一个头文件的 c++ 代码时，遇到了报错 12345fatal error:'bits/stdc++.h' file not found#include &lt;bits/stdc++.h&gt;         ^~~~~~~~~~~~~~~1 error generated.查了一下才知道：Mac OS ......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2019-05-06
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#gcc" title="gcc">gcc</a>
+                    
+                      <a href="/tags/#macOS" title="macOS">macOS</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2019/02/13/Python3-web-crawler-zhihu/">
+                <h2 class="post-title">
+                    Python3 web crawler zhihu
+                </h2>
+                <h3 class="post-subtitle">
+                    Python3 爬取知乎回答下面的评论
+                </h3>
+                <div class="post-content-preview">
+                    免责声明：本项目代码遵循 robots.txt 协议，并仅供个人学习 python 使用，且无实际用处。
+这个迫真爬虫是年前用了和 req-ccnu 一样的方法写的（api + 模拟登陆），他们都有一个特点，就是处理 curl 后，后端返回的 json。当时没有看面向对象也没有学语法，所以以后要好好学 bs4，lxml，scrapy 写真正意义上的爬虫。 简单的源代码：https://git......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2019-02-13
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#Web crawler" title="Web crawler">Web crawler</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2018/04/30/Fish-shell/">
+                <h2 class="post-title">
+                    Fish shell
+                </h2>
+                <h3 class="post-subtitle">
+                    macOS 中 Fish shell 的下载和配置
+                </h3>
+                <div class="post-content-preview">
+                    
+很扯淡的前言：本文是一篇很随意、很爆笑的文章。大概是前几天一个晚上，杰哥唐突说：“没有配置过的 zsh 就是 shit，甚至不如 bash，如果使用的是没有配置过的 zsh，那么你的人生令人难过，我是佛祖 我拯救你 快换fish”，妈耶吓死我了，于是抱着猎奇的心态，我就这样下载了一次 fish。
+
+下载 fish shell 之前我的电脑终端是 oh-my-zsh 里的某个主题，vps 上......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2018-04-30
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#fish shell" title="fish shell">fish shell</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+    
+
+        <div class="post-preview">
+
+            <a href="/2017/12/10/Xperia-XZ-Premium/">
+                <h2 class="post-title">
+                    Xperia XZ Premium
+                </h2>
+                <h3 class="post-subtitle">
+                    关于 Xperia XZ Premium 手机贴膜
+                </h3>
+                <div class="post-content-preview">
+                    引子：这个月初，千千找欣欣帮忙，入了港版索尼的 XZP，到手裸奔玩了半天后，决定要给这个 4k 镜子配一些外壳、转换插头和贴膜。这篇文章主要是说 XZP 贴膜的事情。
+
+因为是被人说成「小众？」的手机，我们几乎不可能会在路边或者街边店铺里，随便找人花 20￥ 贴一张，因为他们没有适配机型的膜。可是你要相信有需求就有市场，点开某宝就会发现更大的世界：全包膜、水凝膜、钢化膜、磨砂膜、蓝光膜……天......
+                </div>
+            </a>
+            
+                <p class="post-meta" style="margin: 10px 0;">
+                    Posted by wwyqianqian on
+                    2017-12-10
+                </p>
+                <div class="tags">
+                    
+                      <a href="/tags/#Sony" title="Sony">Sony</a>
+                    
+                </div>
+            
+
+        </div>
+        <hr>
+
+    
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+    
+        <li class="next">
+            <a href="/archives/2/">Older Posts &rarr;</a>
+        </li>
+    
+</ul>
+
+
+            </div>
+
+            <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">ABOUT ME</a></h5>
+    <div class="short-about">
+
+        
+            <img id = "avatar_pic" src="/img/ironman-draw.png" />
+        
+
+        
+            <p>Welcome to visit my blog, I&#39;m wwyqianqian! Previously was a student in cs@ccnu.edu.cn and csslp@sheffield.ac.uk, now I am visiting UbiComp@ict.ac.cn </p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+
+            
+                <li>
+                    <a target="_blank"  href="https://github.com/wwyqianqian">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+
+            
+                <li>
+                    <a target="_blank" href="https://twitter.com/wwyqianqian">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+        </ul>
+    </div>
+</section>
+        <hr>
+    
+        
+  <h5>VISITORS</h5>
+  <div class="widget">
+    <span>
+    	Viewed <b><i><span id="busuanzi_value_site_pv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Times
+	</span>
+	<br/>
+	<span>
+		<b><i><span id="busuanzi_value_site_uv"><i class="fa fa-spinner fa-spin"></i></span></i></b> Visitors In Total
+	</span>
+  </div>
+
+        <hr>
+    
+        
+  <h5>RECENT POSTS</h5>
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/2023/06/23/my2023/">我的 2023（一）</a>
+        </li>
+      
+        <li>
+          <a href="/2022/07/08/PEK-to-HKG/">PEK to HKG</a>
+        </li>
+      
+        <li>
+          <a href="/2022/06/12/Paper-Reading-three-literature-reviews/">Paper Reading: three literature reviews</a>
+        </li>
+      
+        <li>
+          <a href="/2022/03/01/Paper-human-activity-recognition-cognitive-science/">Paper: human activity recognition &lt;-&gt; cognitive science</a>
+        </li>
+      
+        <li>
+          <a href="/2022/01/06/Describe-and-evaluate-how-research-in-your-field-addresses-inequality/">Describe and evaluate how research in your field addresses inequality</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        <hr>
+    
+        
+    <h5>ARCHIVES</h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/06/">June 2023</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/01/">January 2022</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">February 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">April 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/12/">December 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/08/">August 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+        <hr>
+    
+        <!-- Categories -->
+
+    <h5>categories</h5>
+    <div class="widget">
+      <ul>
+        
+          <a href="categories/#Linux"><li>Linux</li></a>
+        
+          <a href="categories/#Python"><li>Python</li></a>
+        
+          <a href="categories/#碎碎念"><li>碎碎念</li></a>
+        
+          <a href="categories/#中科院计算所"><li>中科院计算所</li></a>
+        
+          <a href="categories/#Sheffield"><li>Sheffield</li></a>
+        
+          <a href="categories/#polyu"><li>polyu</li></a>
+        
+      </ul>
+    </div>
+
+        <hr>
+    
+</div>
+
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/wwyqianqian">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/wwyqianqian">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+
+                
+
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; wwyqianqian 2024 
+                    <br>
+                    Powered by 
+                    <a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">
+                        <i>hexo-theme-snail</i>
+                    </a> | 
+                    <iframe name="star" style="margin-left: 2px; margin-bottom:-5px;" frameborder="0" scrolling="0"
+                        width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=dusign&repo=hexo-theme-snail&type=star&count=true">
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+<!-- jQuery -->
+
+<script src="/js/jquery.min.js"></script>
+
+
+<!-- Bootstrap Core JavaScript -->
+
+<script src="/js/bootstrap.min.js"></script>
+
+
+<!-- Custom Theme JavaScript -->
+
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- Search -->
+
+<script src="/js/search.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://wwyqianqian.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Search -->
+
+
+<!-- busuanzi -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+    
+
+    <!--<script size="50" alpha='0.3' zIndex="-999" src="/js/ribbonStatic.js"></script>-->
+    
+        <script src="/js/ribbonDynamic.js"></script>
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
