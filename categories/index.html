@@ -251,7 +251,7 @@
                 
                     <a href="#碎碎念" title="碎碎念" rel="1">碎碎念</a>
                 
-                    <a href="#香港生活实录" title="香港生活实录" rel="3">香港生活实录</a>
+                    <a href="#香港生活实录" title="香港生活实录" rel="4">香港生活实录</a>
                 
             </div>
 
@@ -698,6 +698,21 @@
                 </div>
                 <hr>
                 
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/2025/07/29/aesop/">
+                        <h2 class="post-title">
+                            aesop 的定价记录表格
+                        </h2>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
             </div>
             
 
@@ -866,21 +881,6 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

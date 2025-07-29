@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2025-07-08T08:40:58.433Z</updated>
+  <updated>2025-07-29T08:07:01.019Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>aesop 的定价记录表格</title>
+    <link href="https://wwyqianqian.github.io/2025/07/29/aesop/"/>
+    <id>https://wwyqianqian.github.io/2025/07/29/aesop/</id>
+    <published>2025-07-29T07:19:55.000Z</published>
+    <updated>2025-07-29T08:07:01.019Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;以下-Aesop-产品是在港澳买划算的：🇭🇰🇲🇴&quot;&gt;&lt;a href=&quot;#以下-Aesop-产品是在港澳买划算的：🇭🇰🇲🇴&quot; class=&quot;headerlink&quot; title=&quot;以下 Aesop</summary>
+        
+      
+    
+    
+    
+    <category term="香港生活实录" scheme="https://wwyqianqian.github.io/categories/%E9%A6%99%E6%B8%AF%E7%94%9F%E6%B4%BB%E5%AE%9E%E5%BD%95/"/>
+    
+    
+    <category term="生活技巧" scheme="https://wwyqianqian.github.io/tags/%E7%94%9F%E6%B4%BB%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
   
   <entry>
     <title>香港买新房流水账（二）</title>
@@ -523,34 +548,6 @@
     <category term="BTC" scheme="https://wwyqianqian.github.io/tags/BTC/"/>
     
     <category term="Cyber Security" scheme="https://wwyqianqian.github.io/tags/Cyber-Security/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Ubuntu</title>
-    <link href="https://wwyqianqian.github.io/2017/04/17/Ubuntu/"/>
-    <id>https://wwyqianqian.github.io/2017/04/17/Ubuntu/</id>
-    <published>2017-04-16T16:07:10.000Z</published>
-    <updated>2022-02-12T07:21:49.747Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;  因为做 lab 需要 Linux 环境而不是 Unix，所以找奔腾袁大佬装了个 VirtualBox，我作为萌新刚入门，也就暂时将就着使用 Ubuntu吧，以后会尝试其他发行版的~&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;p&gt; 装了</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
-    
-    
-    <category term="Ubuntu" scheme="https://wwyqianqian.github.io/tags/Ubuntu/"/>
     
   </entry>
   
