@@ -179,13 +179,6 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -200,14 +193,21 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -265,20 +265,68 @@
                 <blockquote>
 <p>很扯淡的前言：本文是一篇很随意、很爆笑的文章。大概是前几天一个晚上，杰哥唐突说：“没有配置过的 zsh 就是 shit，甚至不如 bash，如果使用的是没有配置过的 zsh，那么你的人生令人难过，我是佛祖 我拯救你 快换fish”，妈耶吓死我了，于是抱着猎奇的心态，我就这样下载了一次 fish。</p>
 </blockquote>
-<h3 id="下载-fish-shell"><a href="#下载-fish-shell" class="headerlink" title="下载 fish shell"></a>下载 fish shell</h3><p> 之前我的电脑终端是 oh-my-zsh 里的某个主题，vps 上的是 zsh，谈不上好看和好用，起码说他是彩色的而且有一些视觉上的『交互』？（描述并不是很准确。omzsh 我没有下载什么插件，同样也没有配置任何东西，对于我这种只在终端 cd 和 ls 的玩家好像无关紧要，但是对于杰哥那种运维来讲也许算是折磨吧。也许他们崇尚一种『开箱即用』的理念，而懒得花费时间去进行无聊的配置，所以 fish ---正好满足他们这种需求。</p>
-
-<p>在 mac OS 环境下载 <a href="https://github.com/fish-shell/fish-shell" target="_blank" rel="noopener">fish</a> (使用 homebrew)<br/><br><code>brew install fish</code> <br/><br>把 fish 添加到列表 <br/><br><code>vim /etc/shells
-在最后加上 /usr/local/bin/fish</code> <br/><br>切换 shell 到新下载的 fish <br/><br><code>chsh -s /usr/local/bin/fish</code> <br/><br>这样 shell 从 zsh 变成了 fish，你会看见一条可爱的小鱼。 <br/><br>来试试骚气的东西，比如：<br/><br><code>set fish_greeting &#39;hello fish&#39;</code> 你可以设置一个 greeting <br/><br><code>sudo scutil --set HostName MBP💋</code> 你可以修改一下曾经很无聊的 hostname <br/><br>当然等等这些沙雕玩意在别的 shell 同样可以设置，只不过会在不同程度影响启动速度罢了。比如 omzsh 我设置完了这些没卵用的东西后，启动速度肉眼可见的变慢。但是换做 fish ，你不必担心。</p>
-<h3 id="OMF-的安装"><a href="#OMF-的安装" class="headerlink" title="OMF 的安装"></a>OMF 的安装</h3><p>言归正传，既然 zsh 有 oh-my-zsh，那么优秀的 fish 当然有 oh-my-fish 与其对应了： <a href="https://github.com/oh-my-fish/oh-my-fish" target="_blank" rel="noopener">https://github.com/oh-my-fish/oh-my-fish</a> 。OMF 是 fish shell 的框架，可以管理 fish 的配置、主题和插件。<br/><br>他有一万种下载方法 <br/><br><code>curl -L https://get.oh-my.fish | fish</code> 我选择 curl 这个官方一键脚本 <br/><br>更新插件和主题 <br/><br><code>omf update</code> <br/><br>下载包 <br/><br><code>omf install [&lt;name&gt;|&lt;url&gt;]</code> <br/><br>列出已下载的包 <br/><br><code>omf list</code> <br/><br>管理包 <br/><br><code>omf repositories [list|add|remove]</code> <br/><br>应用某个主题 <br/><br><code>omf theme &lt;theme&gt;</code> <br/><br>查看故障 <br/><br><code>omf doctor</code> <br/><br>……等等等等，简直就是个低配版 homebrew 哇，麻雀虽小五脏俱全的感觉。简单看完这些用法之后，就要动手换一下主题啦，提升一下原本黑洞洞的颜值。<br/></p>
-<h3 id="动手简单配置"><a href="#动手简单配置" class="headerlink" title="动手简单配置"></a>动手简单配置</h3><p>主题的话，<a href="https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md" target="_blank" rel="noopener">https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md</a> ，列出了好多好多不错的选择，我随意选择了 <a href="https://github.com/oh-my-fish/theme-bobthefish" target="_blank" rel="noopener">bobthefish</a> 这一款。 <br/><br>使用 OMF 下载 bobthefish <br/><br><code>omf install bobthefish</code> <br/><br>但是并没有和预想的一样，因为还需要下载一些字体和奇怪的 icon <br/><br><code>git clone https://github.com/powerline/fonts.git --depth=1</code> <br/><br><code>cd fonts</code> <br/><br><code>./install.sh</code> <br/><br><code>cd ..</code> <br/><br><code>rm -rf fonts</code> <br/><br><code>cd ~/Library/Fonts &amp;&amp; curl -fLo &quot;Droid Sans Mono for Powerline Nerd Font Complete.otf&quot; https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf</code> <br/><br>手动应用这些字体：<br>iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Text -&gt; Font : Noto Mono for Powerline, monofor for Powerline <br/><br><code>set -g theme_powerline_fonts yes</code> <br/><br><code>set -g theme_nerd_fonts yes</code> <br/><br>重启终端，成功啦，接下来我们更改配色方案，我选择了 zenburn 。<br>可以预览配色方案 <br/><br><code>bobthefish_display_colors</code> // 预览<br/><br><code>vim ~/.config/fish/config.fish</code> // 写入配置<br/><br><code>set -g theme_color_scheme zenburn</code><br/><br>简单的玩法就这些，进阶的可以看文档折腾。<br/></p>
-<h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>fish 真的好用吗？我个人而言</p>
+<h3 id="下载-fish-shell">下载 fish shell</h3>
+<p> 之前我的电脑终端是 oh-my-zsh 里的某个主题，vps 上的是 zsh，谈不上好看和好用，起码说他是彩色的而且有一些视觉上的『交互』？（描述并不是很准确。omzsh 我没有下载什么插件，同样也没有配置任何东西，对于我这种只在终端 cd 和 ls 的玩家好像无关紧要，但是对于杰哥那种运维来讲也许算是折磨吧。也许他们崇尚一种『开箱即用』的理念，而懒得花费时间去进行无聊的配置，所以 fish ---正好满足他们这种需求。</p>
+<p>在 mac OS 环境下载 <a href="https://github.com/fish-shell/fish-shell" target="_blank" rel="noopener">fish</a> (使用 homebrew)<br/><br>
+<code>brew install fish</code> <br/><br>
+把 fish 添加到列表 <br/><br>
+<code>vim /etc/shells 在最后加上 /usr/local/bin/fish</code> <br/><br>
+切换 shell 到新下载的 fish <br/><br>
+<code>chsh -s /usr/local/bin/fish</code> <br/><br>
+这样 shell 从 zsh 变成了 fish，你会看见一条可爱的小鱼。 <br/><br>
+来试试骚气的东西，比如：<br/><br>
+<code>set fish_greeting 'hello fish'</code> 你可以设置一个 greeting <br/><br>
+<code>sudo scutil --set HostName MBP💋</code> 你可以修改一下曾经很无聊的 hostname <br/><br>
+当然等等这些沙雕玩意在别的 shell 同样可以设置，只不过会在不同程度影响启动速度罢了。比如 omzsh 我设置完了这些没卵用的东西后，启动速度肉眼可见的变慢。但是换做 fish ，你不必担心。</p>
+<h3 id="OMF-的安装">OMF 的安装</h3>
+<p>言归正传，既然 zsh 有 oh-my-zsh，那么优秀的 fish 当然有 oh-my-fish 与其对应了： <a href="https://github.com/oh-my-fish/oh-my-fish" target="_blank" rel="noopener">https://github.com/oh-my-fish/oh-my-fish</a> 。OMF 是 fish shell 的框架，可以管理 fish 的配置、主题和插件。<br/><br>
+他有一万种下载方法 <br/><br>
+<code>curl -L https://get.oh-my.fish | fish</code> 我选择 curl 这个官方一键脚本 <br/><br>
+更新插件和主题 <br/><br>
+<code>omf update</code> <br/><br>
+下载包 <br/><br>
+<code>omf install [&lt;name&gt;|&lt;url&gt;]</code> <br/><br>
+列出已下载的包 <br/><br>
+<code>omf list</code> <br/><br>
+管理包 <br/><br>
+<code>omf repositories [list|add|remove]</code> <br/><br>
+应用某个主题 <br/><br>
+<code>omf theme &lt;theme&gt;</code> <br/><br>
+查看故障 <br/><br>
+<code>omf doctor</code> <br/><br>
+……等等等等，简直就是个低配版 homebrew 哇，麻雀虽小五脏俱全的感觉。简单看完这些用法之后，就要动手换一下主题啦，提升一下原本黑洞洞的颜值。<br/></p>
+<h3 id="动手简单配置">动手简单配置</h3>
+<p>主题的话，<a href="https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md" target="_blank" rel="noopener">https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md</a> ，列出了好多好多不错的选择，我随意选择了 <a href="https://github.com/oh-my-fish/theme-bobthefish" target="_blank" rel="noopener">bobthefish</a> 这一款。 <br/><br>
+使用 OMF 下载 bobthefish <br/><br>
+<code>omf install bobthefish</code> <br/><br>
+但是并没有和预想的一样，因为还需要下载一些字体和奇怪的 icon <br/><br>
+<code>git clone https://github.com/powerline/fonts.git --depth=1</code> <br/><br>
+<code>cd fonts</code> <br/><br>
+<code>./install.sh</code> <br/><br>
+<code>cd ..</code> <br/><br>
+<code>rm -rf fonts</code> <br/><br>
+<code>cd ~/Library/Fonts &amp;&amp; curl -fLo &quot;Droid Sans Mono for Powerline Nerd Font Complete.otf&quot; https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf</code> <br/><br>
+手动应用这些字体：<br>
+iTerm2 -&gt; Preferences -&gt; Profiles -&gt; Text -&gt; Font : Noto Mono for Powerline, monofor for Powerline <br/><br>
+<code>set -g theme_powerline_fonts yes</code> <br/><br>
+<code>set -g theme_nerd_fonts yes</code> <br/><br>
+重启终端，成功啦，接下来我们更改配色方案，我选择了 zenburn 。<br>
+可以预览配色方案 <br/><br>
+<code>bobthefish_display_colors</code> // 预览<br/><br>
+<code>vim ~/.config/fish/config.fish</code> // 写入配置<br/><br>
+<code>set -g theme_color_scheme zenburn</code><br/><br>
+简单的玩法就这些，进阶的可以看文档折腾。<br/></p>
+<h3 id="结语">结语</h3>
+<p>fish 真的好用吗？我个人而言</p>
 <ul>
-<li>单独是 fish，下载完就有「<br>Autosuggestions」功能 ，根据你的历史命令给你建议，类似于 zsh 的 tab 键自动补全，不过这个你不用按 tab，也不用打过多的字母，右方向键就可以，节省了很多的时间。不过其他 shell 也有插件实现这个功能，可惜需要下载或者手写，而且有启动速度慢的风险。</li>
+<li>单独是 fish，下载完就有「<br>
+Autosuggestions」功能 ，根据你的历史命令给你建议，类似于 zsh 的 tab 键自动补全，不过这个你不用按 tab，也不用打过多的字母，右方向键就可以，节省了很多的时间。不过其他 shell 也有插件实现这个功能，可惜需要下载或者手写，而且有启动速度慢的风险。</li>
 <li>fish 有管理插件、主题的 OMF，还有文中没有提过的管理插件的 <a href="https://github.com/fisherman/fisherman" target="_blank" rel="noopener">fisherman</a> ，和包管理器 <a href="https://github.com/tuvistavie/fundle" target="_blank" rel="noopener">fundle</a> 。</li>
 <li>fish 做到了开箱即用。</li>
 <li>fish 启动速度贼快。</li>
 </ul>
-<p>可是 fish 不太支持 bash 语法。不过 ls，cd，rm -rf 什么的无所谓哈哈哈。<br/><br><strong>就像是世界上最好的语言是什么？新手机要不要贴膜戴壳一样，shell 究竟哪个好用，仁者见仁智者见智。大不了我们可以 <code>cat /etc/shells</code> 然后随便 random 一个 (不！万一有一天我们嫌弃了 OMF，不妨 <code>omf destroy</code> ，这时候还要最后感谢 OMF 卸载的方便。</strong></p>
+<p>可是 fish 不太支持 bash 语法。不过 ls，cd，rm -rf 什么的无所谓哈哈哈。<br/><br>
+<strong>就像是世界上最好的语言是什么？新手机要不要贴膜戴壳一样，shell 究竟哪个好用，仁者见仁智者见智。大不了我们可以 <code>cat /etc/shells</code> 然后随便 random 一个 (不！万一有一天我们嫌弃了 OMF，不妨 <code>omf destroy</code> ，这时候还要最后感谢 OMF 卸载的方便。</strong></p>
 
                 
                 <hr>
@@ -449,15 +497,6 @@
                 
 
                 
-                    <li>
-                        <a target="_blank" href="https://twitter.com/wwyqianqian">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
 
                 
 
@@ -589,6 +628,21 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

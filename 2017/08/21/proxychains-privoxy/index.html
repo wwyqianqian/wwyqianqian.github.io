@@ -179,13 +179,6 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -200,14 +193,21 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -266,49 +266,66 @@
 <blockquote>
 <p>昨晚要帮朋友在 terminal 里面跑个作业，我虽然打开了 1080，而且开了全局，但发现终端依旧需要配置，因为终端不支持 Socks5 代理，只支持 http 代理。所以得解决一下。</p>
 </blockquote>
-<h2 id="方法一：使用-proxychains"><a href="#方法一：使用-proxychains" class="headerlink" title="方法一：使用 proxychains"></a>方法一：使用 proxychains</h2><ul>
-<li><p>macOS homebrew 下载并进入配置页面</p>
+<h2 id="方法一：使用-proxychains">方法一：使用 proxychains</h2>
+<ul>
+<li>macOS homebrew 下载并进入配置页面</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew install proxychains-ng</span><br><span class="line">vim &#x2F;usr&#x2F;local&#x2F;etc&#x2F;proxychains.conf</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在 <code>[ProxyList]</code> 下面加入</p>
+<ul>
+<li>在 <code>[ProxyList]</code> 下面加入</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socks5 127.0.0.1 1080</span><br></pre></td></tr></table></figure>
 <p>（shadowsocks 本地端口是 1080），不用管那个被注释掉的 socks4 127.0.0.1 9050 (其实是Tor)。</p>
-</li>
-<li><p>试试是否成功，可惜没有通。</p>
+<ul>
+<li>试试是否成功，可惜没有通。</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains4 curl google.com</span><br></pre></td></tr></table></figure>
 <p>询问好多人，最后才发现 “你们 Mac 的内置 curl 怎么还带坑的”，即，自带的 curl 版本都比较老。详见 qingliu 找到的这个 issue <a href="https://github.com/rofl0r/proxychains-ng/issues/78" target="_blank" rel="noopener">https://github.com/rofl0r/proxychains-ng/issues/78</a> 。</p>
-</li>
-<li><p>这个问题鳖了我半天，所以赶紧再 brew 下载一个 curl</p>
+<ul>
+<li>这个问题鳖了我半天，所以赶紧再 brew 下载一个 curl</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install curl</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>之后就是素质三连。果然通了！</p>
+<ul>
+<li>之后就是素质三连。果然通了！</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &#39;export PATH&#x3D;&quot;&#x2F;usr&#x2F;local&#x2F;opt&#x2F;curl&#x2F;bin:$PATH&quot;&#39; » ~&#x2F;.zshrc</span><br><span class="line">source ~&#x2F;.zshrc</span><br><span class="line">proxychains4 curl -v https:&#x2F;&#x2F;www.google.com</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>最后开心地小脚本跑起来</p>
+<ul>
+<li>最后开心地小脚本跑起来</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains4 ~&#x2F;xxxxxx.sh</span><br></pre></td></tr></table></figure>
-<h2 id="方法二：使用-privoxy"><a href="#方法二：使用-privoxy" class="headerlink" title="方法二：使用 privoxy"></a>方法二：使用 privoxy</h2><p>因为终端不支持 Socks5，只支持 http代理，所以可以使用 privoxy，我们正常理解的 Privoxy<a href="https://zh.wikipedia.org/wiki/Privoxy" target="_blank" rel="noopener">“是一款带过滤功能的代理服务器，针对了 HTTP、HTTPS 协议。通过 Privoxy 的过滤功能，用户可以保护隐私、对网页内容进行过滤、管理 cookies，以及拦阻各种广告等。”</a> 在这里，我们用它在应用层进行代理转发，也就是说，要使用它之前，ss 得开启，privoxy 只是一个转发辅助，不能单独用于 fuxk GFW。</p>
-</li>
-<li><p>macOS 使用 homebrew 下载 privoxy</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install privoxy</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改配置文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;usr&#x2F;local&#x2F;etc&#x2F;privoxy&#x2F;config</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在里面加上</p>
+<h2 id="方法二：使用-privoxy">方法二：使用 privoxy</h2>
+<p>因为终端不支持 Socks5，只支持 http代理，所以可以使用 privoxy，我们正常理解的 Privoxy<a href="https://zh.wikipedia.org/wiki/Privoxy" target="_blank" rel="noopener">“是一款带过滤功能的代理服务器，针对了 HTTP、HTTPS 协议。通过 Privoxy 的过滤功能，用户可以保护隐私、对网页内容进行过滤、管理 cookies，以及拦阻各种广告等。”</a> 在这里，我们用它在应用层进行代理转发，也就是说，要使用它之前，ss 得开启，privoxy 只是一个转发辅助，不能单独用于 fuxk GFW。</p>
+<ul>
+<li>macOS 使用 homebrew 下载 privoxy</li>
+</ul>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install privoxy</span><br></pre></td></tr></table></figure>
+<ul>
+<li>修改配置文件</li>
+</ul>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;usr&#x2F;local&#x2F;etc&#x2F;privoxy&#x2F;config</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在里面加上</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">listen-address 0.0.0.0:8118</span><br><span class="line">forward-socks5 &#x2F; 127.0.0.1:1080 .</span><br></pre></td></tr></table></figure>
 <p><code>0.0.0.0</code> 是让其他设备可以访问，也就是说局域网下的配置。如果仅仅要本机的话，那就改为 <code>127.0.0.1</code>，我这里是<code>0.0.0.0</code>； 8118 是HTTP 代理端口号；1080 后不要忘了那个 <code>.</code></p>
-</li>
-<li><p>启动 privoxy</p>
+<ul>
+<li>启动 privoxy</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;usr&#x2F;local&#x2F;sbin&#x2F;privoxy &#x2F;usr&#x2F;local&#x2F;etc&#x2F;privoxy&#x2F;config</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>查看监听情况</p>
+<ul>
+<li>查看监听情况</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -na | grep 8118</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>加在终端里面，我的是 zsh，所以是 <code>vim .zshrc</code>，感谢狗杰哥提供函数：</p>
+<ul>
+<li>加在终端里面，我的是 zsh，所以是 <code>vim .zshrc</code>，感谢狗杰哥提供函数：</li>
+</ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">proxy-activate() &#123;</span><br><span class="line">    export http_proxy&#x3D;&#39;http:&#x2F;&#x2F;127.0.0.1:8118&#39;</span><br><span class="line">    export https_proxy&#x3D;$http_proxy</span><br><span class="line">&#125;</span><br><span class="line">proxy-deactivate() &#123;</span><br><span class="line">    unset http_proxy</span><br><span class="line">    unset https_proxy</span><br><span class="line">&#125;</span><br><span class="line">alias pa&#x3D;&#39;proxy-activate&#39;</span><br><span class="line">alias pd&#x3D;&#39;proxy-deactivate&#39;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>重启一下 terminal，这样，pa 一下终端就通了。pd 一下终端就回归大局域网了。当然，别忘了 pa 之前 ss 要先是开启状态的。<br>开心，小脚本跑起来:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pa</span><br><span class="line">bash ~&#x2F;xxxxxx.sh</span><br></pre></td></tr></table></figure></li>
+<ul>
+<li>重启一下 terminal，这样，pa 一下终端就通了。pd 一下终端就回归大局域网了。当然，别忘了 pa 之前 ss 要先是开启状态的。<br>
+开心，小脚本跑起来:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pa</span><br><span class="line">bash ~&#x2F;xxxxxx.sh</span><br></pre></td></tr></table></figure>
+<ul>
 <li>注意： pa 、pd 是对 <strong>某一个</strong> terminal 里的 tab 生效的，(who am i)，新开启一个标签页应该再手动 pa。</li>
 </ul>
 <hr>
@@ -483,15 +500,6 @@
                 
 
                 
-                    <li>
-                        <a target="_blank" href="https://twitter.com/wwyqianqian">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
 
                 
 
@@ -623,6 +631,21 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

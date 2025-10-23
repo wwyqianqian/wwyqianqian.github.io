@@ -179,13 +179,6 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -200,14 +193,21 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -262,31 +262,47 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h3 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h3><p>还有一个多小时就是 2019 Google I/O 大会了，不得不感叹时间过的好快。五月谷歌，六月苹果，年复一年，技术不长反退，人也懒散起来。只好整理心情水水博客找点事情做。<br/><br>两年前看好友 <a href="https://kirikira.moe/" target="_blank" rel="noopener"><strong>kiri</strong></a> 就在搞 <a href="https://www.v2ray.com/" target="_blank" rel="noopener">V2</a> 的轮子，<a href="https://dazzyd.org" target="_blank" rel="noopener"><strong>狗杰哥</strong></a> 这几天也突然安利我下载个客户端试试看，800 米体测过后点了盒马犒劳自己，饱餐后准备和他一起折腾迷之客户端。<a href="https://github.com/Cenmrev/V2RayX" target="_blank" rel="noopener">V2RayX</a> 是 macOS 上面的 GUI。习惯性地从 release 下载，其实读 readme 是可以从 brew 下载的，直到我写这篇博客的时候才看到，蠢哭了。</p>
-<h3 id="相比于-ss-有何优点？"><a href="#相比于-ss-有何优点？" class="headerlink" title="相比于 ss 有何优点？"></a>相比于 ss 有何优点？</h3><p>我之前用的只是 ssX-NG 客户端，那么为什么换成 V2RayX 呢？<br/><br>Proxy auto-config Mode，简称 pac 模式，大家开 ss 的时候应该经常用到，在浏览器键入 URL 之后会跑 JS 脚本来判断走代理还是直连，可是实际生活中还是会出现应用程序不能工作或者网页无法加载的问题。网络大师杰哥认为：</p>
+                <h3 id="碎碎念">碎碎念</h3>
+<p>还有一个多小时就是 2019 Google I/O 大会了，不得不感叹时间过的好快。五月谷歌，六月苹果，年复一年，技术不长反退，人也懒散起来。只好整理心情水水博客找点事情做。<br/><br>
+两年前看好友 <a href="https://kirikira.moe/" target="_blank" rel="noopener"><strong>kiri</strong></a> 就在搞 <a href="https://www.v2ray.com/" target="_blank" rel="noopener">V2</a> 的轮子，<a href="https://dazzyd.org" target="_blank" rel="noopener"><strong>狗杰哥</strong></a> 这几天也突然安利我下载个客户端试试看，800 米体测过后点了盒马犒劳自己，饱餐后准备和他一起折腾迷之客户端。<a href="https://github.com/Cenmrev/V2RayX" target="_blank" rel="noopener">V2RayX</a> 是 macOS 上面的 GUI。习惯性地从 release 下载，其实读 readme 是可以从 brew 下载的，直到我写这篇博客的时候才看到，蠢哭了。</p>
+<h3 id="相比于-ss-有何优点？">相比于 ss 有何优点？</h3>
+<p>我之前用的只是 ssX-NG 客户端，那么为什么换成 V2RayX 呢？<br/><br>
+Proxy auto-config Mode，简称 pac 模式，大家开 ss 的时候应该经常用到，在浏览器键入 URL 之后会跑 JS 脚本来判断走代理还是直连，可是实际生活中还是会出现应用程序不能工作或者网页无法加载的问题。网络大师杰哥认为：</p>
 <blockquote>
 <p>ss + pac 就是程序读 pac，自己执行 pac 判断请求路由到本地代理还是直连。相比之下，v2ray + global 则是程序无脑请求本地代理，代理程序来判断路由方向。在我们日常支持 pac 的程序很少的情况下，显然后者兼容性更好。</p>
 </blockquote>
-<p>V2Ray + Global 带来了更好的兼容性，可以真全局，也可以按照规则来路由，这取决于自己选择的 routing rule。所以这次我来试试告别 ssX-NG，拥抱 V2RayX。<br/><br>为了方便理解，我做了两张流程图如下：<br/><br><img src="./ss.svg" alt="ss"><br><img src="./v2ray.svg" alt="V2Ray"></p>
-<h3 id="开箱配置"><a href="#开箱配置" class="headerlink" title="开箱配置"></a>开箱配置</h3><h4 id="1-导入模版-配置规则"><a href="#1-导入模版-配置规则" class="headerlink" title="1.导入模版/配置规则"></a>1.导入模版/配置规则</h4><p><strong>按照安装提示，需要下载一些工具插件，指纹/密码授权后无脑下载就行。这里个人有一点踩坑，菜单里面的<code>authorize v2ray sys_conf</code> 也要手动点击授权（<del>其实第一次打开就默认让输入密码了，我好像手滑按了跳过，其实并不需要手动的</del>）。之后进入菜单栏 configure，import 进一些杰哥给我的配置文件如下：</strong></p>
+<p>V2Ray + Global 带来了更好的兼容性，可以真全局，也可以按照规则来路由，这取决于自己选择的 routing rule。所以这次我来试试告别 ssX-NG，拥抱 V2RayX。<br/><br>
+为了方便理解，我做了两张流程图如下：<br/><br>
+<img src="./ss.svg" alt="ss"><br>
+<img src="./v2ray.svg" alt="V2Ray"></p>
+<h3 id="开箱配置">开箱配置</h3>
+<h4 id="1-导入模版-配置规则">1.导入模版/配置规则</h4>
+<p><strong>按照安装提示，需要下载一些工具插件，指纹/密码授权后无脑下载就行。这里个人有一点踩坑，菜单里面的<code>authorize v2ray sys_conf</code> 也要手动点击授权（<s>其实第一次打开就默认让输入密码了，我好像手滑按了跳过，其实并不需要手动的</s>）。之后进入菜单栏 configure，import 进一些杰哥给我的配置文件如下：</strong></p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"outbounds"</span> : [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"tag"</span> : <span class="string">"NAME"</span>,</span><br><span class="line">      <span class="attr">"protocol"</span> : <span class="string">"shadowsocks"</span>,</span><br><span class="line">      <span class="attr">"settings"</span> : &#123;</span><br><span class="line">        <span class="attr">"servers"</span> : [</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">"password"</span> : <span class="string">"PASSWORD"</span>,</span><br><span class="line">            <span class="attr">"port"</span> : <span class="number">1919</span>,</span><br><span class="line">            <span class="attr">"method"</span> : <span class="string">"chacha20-ietf-poly1305"</span>,</span><br><span class="line">            <span class="attr">"ota"</span> : <span class="literal">false</span>,</span><br><span class="line">            <span class="attr">"address"</span> : <span class="string">"SERVER_ADDRESS"</span></span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"routings"</span> : [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"domainStrategy"</span> : <span class="string">"AsIs"</span>,</span><br><span class="line">      <span class="attr">"rules"</span> : [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"type"</span> : <span class="string">"field"</span>,</span><br><span class="line">          <span class="attr">"outboundTag"</span> : <span class="string">"main"</span>,</span><br><span class="line">          <span class="attr">"port"</span> : <span class="string">"0-65535"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">"name"</span> : <span class="string">"all_to_main"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"domainStrategy"</span> : <span class="string">"AsIs"</span>,</span><br><span class="line">      <span class="attr">"rules"</span> : [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"type"</span> : <span class="string">"field"</span>,</span><br><span class="line">          <span class="attr">"outboundTag"</span> : <span class="string">"direct"</span>,</span><br><span class="line">          <span class="attr">"port"</span> : <span class="string">"0-65535"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">"name"</span> : <span class="string">"all_to_direct"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"domainStrategy"</span> : <span class="string">"IPOnDemand"</span>,</span><br><span class="line">      <span class="attr">"rules"</span> : [</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"type"</span> : <span class="string">"field"</span>,</span><br><span class="line">          <span class="attr">"outboundTag"</span> : <span class="string">"direct"</span>,</span><br><span class="line">          <span class="attr">"domain"</span> : [</span><br><span class="line">            <span class="string">"geosite:cn"</span>,</span><br><span class="line">            <span class="string">"geosite:apple"</span>,</span><br><span class="line">            <span class="string">"domain:me.com"</span>,</span><br><span class="line">            <span class="string">"domain:cdn-apple.com"</span>,</span><br><span class="line">            <span class="string">"domain:aaplimg.com"</span>,</span><br><span class="line">            <span class="string">"domain:steampowered.com"</span></span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"type"</span> : <span class="string">"field"</span>,</span><br><span class="line">          <span class="attr">"outboundTag"</span> : <span class="string">"main"</span>,</span><br><span class="line">          <span class="attr">"domain"</span> : [</span><br><span class="line">            <span class="string">"geosite:geolocation-!cn"</span>,</span><br><span class="line">            <span class="string">"domain:tw"</span></span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"type"</span> : <span class="string">"field"</span>,</span><br><span class="line">          <span class="attr">"ip"</span> : [</span><br><span class="line">            <span class="string">"geoip:private"</span>,</span><br><span class="line">            <span class="string">"geoip:cn"</span></span><br><span class="line">          ],</span><br><span class="line">          <span class="attr">"outboundTag"</span> : <span class="string">"direct"</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          <span class="attr">"type"</span> : <span class="string">"field"</span>,</span><br><span class="line">          <span class="attr">"outboundTag"</span> : <span class="string">"main"</span>,</span><br><span class="line">          <span class="attr">"port"</span> : <span class="string">"0-65535"</span></span><br><span class="line">        &#125;</span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">"name"</span> : <span class="string">"whiltelist"</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>就这样，我倒入进来一个 ss 模版和三条路由规则：all_to_main 全走代理，all_to_direct 全直连，whiltelist 有点复杂。文档：<a href="https://www.v2ray.com/chapter_02/03_routing.html" target="_blank" rel="noopener">https://www.v2ray.com/chapter_02/03_routing.html</a> 。</p>
 <ul>
-<li><p>常见国内域名直连，提高判断效率</p>
+<li>
+<p>常见国内域名直连，提高判断效率</p>
 </li>
-<li><p>常用翻墙域名走代理（含被DNS污染的）</p>
+<li>
+<p>常用翻墙域名走代理（含被DNS污染的）</p>
 </li>
-<li><p>进行DNS解析（IPOnDemand），国内 IP 直连，CDN 在这里解析到国内节点</p>
+<li>
+<p>进行DNS解析（IPOnDemand），国内 IP 直连，CDN 在这里解析到国内节点</p>
 </li>
-<li><p>final: 其余全走代理</p>
+<li>
+<p>final: 其余全走代理</p>
 </li>
 </ul>
-<h4 id="2-填写-server-修改端口-勾选-Proxy"><a href="#2-填写-server-修改端口-勾选-Proxy" class="headerlink" title="2.填写 server 修改端口 勾选 Proxy"></a>2.填写 server 修改端口 勾选 Proxy</h4><p><strong>之后 菜单栏 -&gt;  configure -&gt; advanced -&gt; outbounds 修改 ss 配置、保存 -&gt; view current config.json：<a href="http://127.0.0.1:8070/config.json" target="_blank" rel="noopener">http://127.0.0.1:8070/config.json</a> ，确认无误后 load core。</strong>这时候我发现没有跑起来，可能的原因是 local socks5 的 1080 端口被占用了，可以自己随便换一个大端口试试看。<br/>同时本机电脑网络配置 Proxies 选项中，可以检查是否已经自动☑️勾选上 Web Proxy，Secure Web Proxy，SOSCKS Proxy。以及检查右侧的 proxy server 是否被先前授权过的程序自动填入了。这一点是在通过 Proxies 检查 sys_conf 授权的正确与否。<br/></p>
+<h4 id="2-填写-server-修改端口-勾选-Proxy">2.填写 server 修改端口 勾选 Proxy</h4>
+<p>**之后 菜单栏 -&gt;  configure -&gt; advanced -&gt; outbounds 修改 ss 配置、保存 -&gt; view current config.json：<a href="http://127.0.0.1:8070/config.json" target="_blank" rel="noopener">http://127.0.0.1:8070/config.json</a> ，确认无误后 load core。**这时候我发现没有跑起来，可能的原因是 local socks5 的 1080 端口被占用了，可以自己随便换一个大端口试试看。<br/>同时本机电脑网络配置 Proxies 选项中，可以检查是否已经自动☑️勾选上 Web Proxy，Secure Web Proxy，SOSCKS Proxy。以及检查右侧的 proxy server 是否被先前授权过的程序自动填入了。这一点是在通过 Proxies 检查 sys_conf 授权的正确与否。<br/></p>
 <p>再次 load core。可惜 <code>netstat -na | grep 19198</code> 端口也在监听了，为什么还是没有跑起来呢？<br/></p>
-<h4 id="3-编译-geosite-dat-覆盖原文件"><a href="#3-编译-geosite-dat-覆盖原文件" class="headerlink" title="3.编译 geosite.dat 覆盖原文件"></a>3.编译 geosite.dat 覆盖原文件</h4><p>因为改了上面这些还没完，上文 JSON 中 <code>&quot;geosite:geolocation-!cn&quot;</code> 包含了常见的非国内站点的域名。（<a href="https://github.com/v2ray/domain-list-community" target="_blank" rel="noopener">https://github.com/v2ray/domain-list-community</a> ，这个仓库在维护所有预定义域名列表。）最新 V2Ray 的才有 geolocation-!cn 这个写法，而我们在用的 V2RayX <em>客户端</em> 还没支持。所以要先修改安装包中名字为<code>geosite.dat</code> 的文件。编译全新的 geosite.dat 文件，把原来旧文件覆盖掉。我直接把杰哥的拿来用了。</p>
+<h4 id="3-编译-geosite-dat-覆盖原文件">3.编译 geosite.dat 覆盖原文件</h4>
+<p>因为改了上面这些还没完，上文 JSON 中 <code>&quot;geosite:geolocation-!cn&quot;</code> 包含了常见的非国内站点的域名。（<a href="https://github.com/v2ray/domain-list-community" target="_blank" rel="noopener">https://github.com/v2ray/domain-list-community</a> ，这个仓库在维护所有预定义域名列表。）最新 V2Ray 的才有 geolocation-!cn 这个写法，而我们在用的 V2RayX <em>客户端</em> 还没支持。所以要先修改安装包中名字为<code>geosite.dat</code> 的文件。编译全新的 geosite.dat 文件，把原来旧文件覆盖掉。我直接把杰哥的拿来用了。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /Applications/V2RayX.app/Contents/Resources/</span><br><span class="line">mv /Users/qianqian/Desktop/geosite.dat  geosite.dat</span><br></pre></td></tr></table></figure>
 <p>reload core，理论上应该可以正常使用啦w。<br/></p>
-<h4 id="4-读取-log-与-debug"><a href="#4-读取-log-与-debug" class="headerlink" title="4.读取 log 与 debug"></a>4.读取 log 与 debug</h4><p>Console APP 里面有结果。<br/></p>
+<h4 id="4-读取-log-与-debug">4.读取 log 与 debug</h4>
+<p>Console APP 里面有结果。<br/></p>
 <p>进程起来了。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/A/V/C/Resources$ ps -ef | grep v2ray</span><br><span class="line"></span><br><span class="line">501 89468     1   0 12:38PM ??         0:10.81 /Applications/V2RayX.app/Contents/Resources/v2ray -config http://127.0.0.1:8070/config.json</span><br><span class="line">501 89899 83458   0  1:23PM ttys001    0:00.00 grep --color=auto v2ray</span><br></pre></td></tr></table></figure>
 <p>Curl 谷歌也有反应。</p>
@@ -467,15 +483,6 @@
                 
 
                 
-                    <li>
-                        <a target="_blank" href="https://twitter.com/wwyqianqian">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
 
                 
 
@@ -607,6 +614,21 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

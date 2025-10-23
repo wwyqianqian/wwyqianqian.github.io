@@ -156,13 +156,6 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -177,14 +170,21 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -304,9 +304,11 @@
                 </h3>
                 <div class="post-content-preview">
                     
-5.12晚上八九点，刷微博看到有同学因连接校园网被注入病毒，需支付比特币解锁电脑文件。MikaLeong在知乎里写道
+5.12晚上八九点，刷微博看到有同学因连接校园网被注入病毒，需支付比特币解锁电脑文件。
+MikaLeong在知乎里写道
 
-此次侵略各大计算机的 Wanna Decryptor 是一种基于加密的勒索软件，也被称为 WCRY，针对 Windows Vista，Windows 7 和 Windows 8 的 Windows 版本，旨在通过持有数据文件乃至整个计算机来向受害者敲诈金钱（比特币形式）。......
+
+此次侵略各大计算机的 Wanna Decryptor 是一种基于加密的勒索软件，也被称为 WCRY，针对 Windows Vista，Windows 7 和 Windows 8 的 Windows 版本，旨在通过持有数据文件乃至整个计算机来向受害者敲诈金钱（比特币形式......
                 </div>
             </a>
             
@@ -341,9 +343,9 @@
                 </h3>
                 <div class="post-content-preview">
                     
-  因为做 lab 需要 Linux 环境而不是 Unix，所以找奔腾袁大佬装了个 VirtualBox，我作为萌新刚入门，也就暂时将就着使用 Ubuntu吧，以后会尝试其他发行版的~
+因为做 lab 需要 Linux 环境而不是 Unix，所以找奔腾袁大佬装了个 VirtualBox，我作为萌新刚入门，也就暂时将就着使用 Ubuntu吧，以后会尝试其他发行版的~
 
- 装了 Ubuntu，需要配置一些什么呢？在这之前，要知道 apt-get 。Advanced Package Tool 是 Debian 及其派生发行版的软件包管理器（就像 npm，yarn），软件包管......
+ 装了 Ubuntu，需要配置一些什么呢？在这之前，要知道 apt-get 。Advanced Package Tool 是 Debian 及其派生发行版的软件包管理器（就像 npm，yarn），软件包管理系......
                 </div>
             </a>
             
@@ -415,15 +417,6 @@
                 </li>
             
 
-            
-                <li>
-                    <a target="_blank" href="https://twitter.com/wwyqianqian">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </li>
             
 
             
@@ -499,23 +492,23 @@
     <div class="widget">
       <ul>
         
-          <a href="categories/#Linux"><li>Linux</li></a>
-        
-          <a href="categories/#Python"><li>Python</li></a>
-        
           <a href="categories/#碎碎念"><li>碎碎念</li></a>
         
-          <a href="categories/#中科院计算所"><li>中科院计算所</li></a>
+          <a href="categories/#Linux"><li>Linux</li></a>
         
           <a href="categories/#Sheffield"><li>Sheffield</li></a>
         
-          <a href="categories/#polyu"><li>polyu</li></a>
+          <a href="categories/#中科院计算所"><li>中科院计算所</li></a>
+        
+          <a href="categories/#Python"><li>Python</li></a>
+        
+          <a href="categories/#香港生活实录"><li>香港生活实录</li></a>
         
           <a href="categories/#业余翻译"><li>业余翻译</li></a>
         
           <a href="categories/#碎碎念"><li>碎碎念</li></a>
         
-          <a href="categories/#香港生活实录"><li>香港生活实录</li></a>
+          <a href="categories/#polyu"><li>polyu</li></a>
         
       </ul>
     </div>
@@ -548,15 +541,6 @@
                     </li>
                 
 
-                
-                    <li>
-                        <a target="_blank" href="https://twitter.com/wwyqianqian">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
                 
 
                 
@@ -689,6 +673,21 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

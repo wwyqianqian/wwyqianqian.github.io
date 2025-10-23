@@ -122,7 +122,7 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">910</span> and
+                                Words <span class="post-count">911</span> and
                                 Reading Time <span class="post-count">3</span> Minutes
                             </span>
                             <div class="blank_box"></div>
@@ -179,13 +179,6 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -200,14 +193,21 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -262,28 +262,51 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <h2 id="Gait-Recognition-Based-on-Deep-Learning-A-Survey"><a href="#Gait-Recognition-Based-on-Deep-Learning-A-Survey" class="headerlink" title="Gait Recognition Based on Deep Learning: A Survey"></a>Gait Recognition Based on Deep Learning: A Survey</h2><blockquote>
-<p>CCS Concepts: • Computing methodologies → Machine learning; • Security and privacy → Biometrics;<br>Additional Key Words and Phrases: Gait recognition, biometrics, deep learning</p>
+                <h2 id="Gait-Recognition-Based-on-Deep-Learning-A-Survey">Gait Recognition Based on Deep Learning: A Survey</h2>
+<blockquote>
+<p>CCS Concepts: • Computing methodologies → Machine learning; • Security and privacy → Biometrics;<br>
+Additional Key Words and Phrases: Gait recognition, biometrics, deep learning</p>
 </blockquote>
-<h3 id="1-INTRODUCTION"><a href="#1-INTRODUCTION" class="headerlink" title="1 INTRODUCTION"></a>1 INTRODUCTION</h3><ul>
+<h3 id="1-INTRODUCTION">1 INTRODUCTION</h3>
+<ul>
 <li>步态识别的概念、优势、限制和挑战。前人的相关工作（最近五年）。</li>
-<li>列出三个本文工作：<ul>
+<li>列出三个本文工作：
+<ul>
 <li>系统地介绍最新和最重要的工作，包括通过深度学习方法进行步态识别的策略</li>
 <li>为读者提供有关步态识别的实质性和图解性的理论背景，探索其在生物识别方面的根源，揭示最流行的步态特征提取工具以及用于解决相关限制的架构</li>
 <li>提出一个图文并茂的、分类的、可用于步态识别任务的公共数据集的特征目录</li>
 </ul>
 </li>
 </ul>
-<h3 id="2-THEORETICAL-BACKGROUND"><a href="#2-THEORETICAL-BACKGROUND" class="headerlink" title="2 THEORETICAL BACKGROUND"></a>2 THEORETICAL BACKGROUND</h3><p>介绍生物识别问题的理论背景，描述了用于步态识别的深度学习方法，以及关于步态识别问题的详细介绍</p>
-<h4 id="2-1-Biometric-Identification"><a href="#2-1-Biometric-Identification" class="headerlink" title="2.1 Biometric Identification"></a>2.1 Biometric Identification</h4><p>生物识别的合格标准，和需要考虑的因素有哪些。采用的生物识别方法有：指纹、虹膜、脸部和步态识别。</p>
-<h4 id="2-2-Deep-Learning-Approaches-Considered-for-Gait-Recognition"><a href="#2-2-Deep-Learning-Approaches-Considered-for-Gait-Recognition" class="headerlink" title="2.2 Deep Learning Approaches Considered for Gait Recognition"></a>2.2 Deep Learning Approaches Considered for Gait Recognition</h4><p>介绍 Convolutional Neural Networks , Recurrent Neural Networks (LSTM, GRU), Autoencoders, Capsule Networks, Generative Adversarial Networks, and Deep Belief Networks 的原理、应用和相关前人工作。</p>
-<h4 id="2-3-Gait-Recognition"><a href="#2-3-Gait-Recognition" class="headerlink" title="2.3 Gait Recognition"></a>2.3 Gait Recognition</h4><p>通过生物特征进行人员识别的方法有两个障碍：依赖于个人生物识别信息的被动提供；依赖于特殊设备。<br>而步态识别模型可能可以处理上述缺点（尤其是基于视频）。步态识别提出的技术可以分为两大类，即基于模板和非模板的方法。前者旨在获得躯干或腿部的运动，它们通常专注于穿过空间或基于空间-时间的运动动态方法；后者认为形状及其属性是更相关的特征，例如对个体的识别是测量其形状。</p>
-<h3 id="3-GAIT-RECOGNITION-THROUGH-DEEP-LEARNING-BASED-APPROACHES"><a href="#3-GAIT-RECOGNITION-THROUGH-DEEP-LEARNING-BASED-APPROACHES" class="headerlink" title="3 GAIT RECOGNITION THROUGH DEEP LEARNING-BASED APPROACHES"></a>3 GAIT RECOGNITION THROUGH DEEP LEARNING-BASED APPROACHES</h3><p>分别详细地介绍前人多种步态识别的各种创新模型 (2.2节) 和在数据集上的准确率。<br>总结上述各个方法的应用和效果，介绍表示步态图像数据的方法 GEI，介绍其取得的成果和不足之处。<br>关于步态识别的实际最新情况，介绍可以有两种主要的方法，即基于文献的方法和基于表征的方法。并列出具体各自方法和混合方法的占比比例。</p>
-<h3 id="4-DATASETS"><a href="#4-DATASETS" class="headerlink" title="4 DATASETS"></a>4 DATASETS</h3><p>提出数据集的两个问题所在：1.需要高纬度的视频内容导致高存储 2.伦理和法律问题<br>详细介绍不同数据集的类型、特征、采集和下载使用。（性别、场景中的角度、衣服和鞋子、携带的包和其他物品）</p>
-<h3 id="5-CONCLUSIONS-AND-FUTURE-DIRECTIONS"><a href="#5-CONCLUSIONS-AND-FUTURE-DIRECTIONS" class="headerlink" title="5 CONCLUSIONS AND FUTURE DIRECTIONS"></a>5 CONCLUSIONS AND FUTURE DIRECTIONS</h3><p>这项调查对过去几年中有关步态识别的最重要的工作进行了深入研究，强调了用于这种任务的深度学习技术。它还提供了有关生物识别方法的历史背景，如指纹、虹膜和面部等，以及步态识别，揭示了该领域面临的主要问题和挑战。此外，它还提供了关于该任务的九个最常用数据集的详细描述。<br>提出对未来的趋势：<br>1.Transformer networks<br>2.性别和年龄识别<br>3.危险环境监测<br>4.场景中的多人步态识别。</p>
-<h3 id="REFERENCES-140"><a href="#REFERENCES-140" class="headerlink" title="REFERENCES 140"></a>REFERENCES 140</h3><hr>
-<h2 id="A-Comprehensive-Report-on-Machine-Learning-based-Early-Detection-of-Alzheimer’s-Disease-using-Multi-modal-Neuroimaging-Data"><a href="#A-Comprehensive-Report-on-Machine-Learning-based-Early-Detection-of-Alzheimer’s-Disease-using-Multi-modal-Neuroimaging-Data" class="headerlink" title="A Comprehensive Report on Machine Learning-based Early Detection of Alzheimer’s Disease using Multi-modal Neuroimaging Data"></a>A Comprehensive Report on Machine Learning-based Early Detection of Alzheimer’s Disease using Multi-modal Neuroimaging Data</h2><hr>
-<h2 id="A-Survey-on-Deep-Learning-for-Human-Activity-Recognition"><a href="#A-Survey-on-Deep-Learning-for-Human-Activity-Recognition" class="headerlink" title="A Survey on Deep Learning for Human Activity Recognition"></a>A Survey on Deep Learning for Human Activity Recognition</h2>
+<h3 id="2-THEORETICAL-BACKGROUND">2 THEORETICAL BACKGROUND</h3>
+<p>介绍生物识别问题的理论背景，描述了用于步态识别的深度学习方法，以及关于步态识别问题的详细介绍</p>
+<h4 id="2-1-Biometric-Identification">2.1 Biometric Identification</h4>
+<p>生物识别的合格标准，和需要考虑的因素有哪些。采用的生物识别方法有：指纹、虹膜、脸部和步态识别。</p>
+<h4 id="2-2-Deep-Learning-Approaches-Considered-for-Gait-Recognition">2.2 Deep Learning Approaches Considered for Gait Recognition</h4>
+<p>介绍 Convolutional Neural Networks , Recurrent Neural Networks (LSTM, GRU), Autoencoders, Capsule Networks, Generative Adversarial Networks, and Deep Belief Networks 的原理、应用和相关前人工作。</p>
+<h4 id="2-3-Gait-Recognition">2.3 Gait Recognition</h4>
+<p>通过生物特征进行人员识别的方法有两个障碍：依赖于个人生物识别信息的被动提供；依赖于特殊设备。<br>
+而步态识别模型可能可以处理上述缺点（尤其是基于视频）。步态识别提出的技术可以分为两大类，即基于模板和非模板的方法。前者旨在获得躯干或腿部的运动，它们通常专注于穿过空间或基于空间-时间的运动动态方法；后者认为形状及其属性是更相关的特征，例如对个体的识别是测量其形状。</p>
+<h3 id="3-GAIT-RECOGNITION-THROUGH-DEEP-LEARNING-BASED-APPROACHES">3 GAIT RECOGNITION THROUGH DEEP LEARNING-BASED APPROACHES</h3>
+<p>分别详细地介绍前人多种步态识别的各种创新模型 (2.2节) 和在数据集上的准确率。<br>
+总结上述各个方法的应用和效果，介绍表示步态图像数据的方法 GEI，介绍其取得的成果和不足之处。<br>
+关于步态识别的实际最新情况，介绍可以有两种主要的方法，即基于文献的方法和基于表征的方法。并列出具体各自方法和混合方法的占比比例。</p>
+<h3 id="4-DATASETS">4 DATASETS</h3>
+<p>提出数据集的两个问题所在：1.需要高纬度的视频内容导致高存储 2.伦理和法律问题<br>
+详细介绍不同数据集的类型、特征、采集和下载使用。（性别、场景中的角度、衣服和鞋子、携带的包和其他物品）</p>
+<h3 id="5-CONCLUSIONS-AND-FUTURE-DIRECTIONS">5 CONCLUSIONS AND FUTURE DIRECTIONS</h3>
+<p>这项调查对过去几年中有关步态识别的最重要的工作进行了深入研究，强调了用于这种任务的深度学习技术。它还提供了有关生物识别方法的历史背景，如指纹、虹膜和面部等，以及步态识别，揭示了该领域面临的主要问题和挑战。此外，它还提供了关于该任务的九个最常用数据集的详细描述。<br>
+提出对未来的趋势：<br>
+1.Transformer networks<br>
+2.性别和年龄识别<br>
+3.危险环境监测<br>
+4.场景中的多人步态识别。</p>
+<h3 id="REFERENCES-140">REFERENCES 140</h3>
+<hr>
+<h2 id="A-Comprehensive-Report-on-Machine-Learning-based-Early-Detection-of-Alzheimer’s-Disease-using-Multi-modal-Neuroimaging-Data">A Comprehensive Report on Machine Learning-based Early Detection of Alzheimer’s Disease using Multi-modal Neuroimaging Data</h2>
+<hr>
+<h2 id="A-Survey-on-Deep-Learning-for-Human-Activity-Recognition">A Survey on Deep Learning for Human Activity Recognition</h2>
+
                 
                 <hr>
                 <!-- Pager -->
@@ -453,15 +476,6 @@
                 
 
                 
-                    <li>
-                        <a target="_blank" href="https://twitter.com/wwyqianqian">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
 
                 
 
@@ -593,6 +607,21 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>

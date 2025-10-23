@@ -124,7 +124,7 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">430</span> and
+                                Words <span class="post-count">431</span> and
                                 Reading Time <span class="post-count">2</span> Minutes
                             </span>
                             <div class="blank_box"></div>
@@ -181,13 +181,6 @@
 
                         
                         <li>
-                            <a href="/photography/">Photography</a>
-                        </li>
-                        
-                    
-
-                        
-                        <li>
                             <a href="/about/">About</a>
                         </li>
                         
@@ -202,14 +195,21 @@
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/photography/">Photography</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
@@ -264,9 +264,16 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>今天编译一段带有 <code>#include &lt;bits/stdc++.h&gt;</code> 这样一个头文件的 c++ 代码时，遇到了报错 <br/><br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fatal error:</span><br><span class="line">'bits/stdc++.h' file not found</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line">         ^~~~~~~~~~~~~~~</span><br><span class="line"><span class="number">1</span> error generated.</span><br></pre></td></tr></table></figure><br>查了一下才知道：Mac OS X 10.9+ no longer uses GCC/libstdc++ but uses libc++ and Clang. 所以平时我们 macOS 使用的 gcc 实际上已经是 clang了。<br/><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;work$ gcc -v</span><br><span class="line"></span><br><span class="line">Configured with: --prefix&#x3D;&#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F;usr --with-gxx-include-dir&#x3D;&#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F;Platforms&#x2F;MacOSX.platform&#x2F;Developer&#x2F;SDKs&#x2F;MacOSX10.14.sdk&#x2F;usr&#x2F;include&#x2F;c++&#x2F;4.2.1</span><br><span class="line">Apple LLVM version 10.0.1 (clang-1001.0.46.4)</span><br><span class="line">Target: x86_64-apple-darwin18.5.0</span><br><span class="line">Thread model: posix</span><br><span class="line">InstalledDir: &#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F;Toolchains&#x2F;XcodeDefault.xctoolchain&#x2F;usr&#x2F;bin</span><br></pre></td></tr></table></figure></p>
-<p>如何解决呢？最方便的就是 <code>brew install gcc</code>。在此之前请一定检查自己是否下载过 CLT ，我没有预先下载 CLT，导致自己电脑从源下载，并且自己跑编译，CPU 瞬间 100% 占用，烫的可以煎鸡蛋才发现异常（。<br/><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;work$ brew config</span><br><span class="line"></span><br><span class="line">macOS: 10.14.4-x86_64</span><br><span class="line">CLT: N&#x2F;A</span><br><span class="line">Xcode: 10.2.1</span><br></pre></td></tr></table></figure><br>CLT: N/A，于是要使用 <code>xcode-select --install</code> 命令来下载，苹果 CDN 很迷，请关闭全局梯子。<br/></p>
-<p>终于下载好啦，我们应该使用什么命令编译呢？显然不是 g++ main.cpp -o main，因为不管是 gcc 还是 g++ 这个名字已经被占用了。<br/><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;work$  ls -l &#x2F;usr&#x2F;local&#x2F;bin  |  grep g++                               </span><br><span class="line"></span><br><span class="line">lrwxr-xr-x  1 qianqian  admin        31 May  6 19:45 g++-8 -&gt; ..&#x2F;Cellar&#x2F;gcc&#x2F;8.3.0_2&#x2F;bin&#x2F;g++-8</span><br><span class="line">lrwxr-xr-x  1 qianqian  admin        53 May  6 19:45 x86_64-apple-darwin18-g++-8 -&gt; ..&#x2F;Cellar&#x2F;gcc&#x2F;8.3.0_2&#x2F;bin&#x2F;x86_64-apple-darwin18-g++-8</span><br></pre></td></tr></table></figure><br>所以改成  <code>g++-8 x.cpp -o x</code> 即可啦w</p>
+                <p>今天编译一段带有 <code>#include &lt;bits/stdc++.h&gt;</code> 这样一个头文件的 c++ 代码时，遇到了报错 <br/></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fatal error:</span><br><span class="line">'bits/stdc++.h' file not found</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line">         ^~~~~~~~~~~~~~~</span><br><span class="line"><span class="number">1</span> error generated.</span><br></pre></td></tr></table></figure>
+<p>查了一下才知道：Mac OS X 10.9+ no longer uses GCC/libstdc++ but uses libc++ and Clang. 所以平时我们 macOS 使用的 gcc 实际上已经是 clang了。<br/></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;work$ gcc -v</span><br><span class="line"></span><br><span class="line">Configured with: --prefix&#x3D;&#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F;usr --with-gxx-include-dir&#x3D;&#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F;Platforms&#x2F;MacOSX.platform&#x2F;Developer&#x2F;SDKs&#x2F;MacOSX10.14.sdk&#x2F;usr&#x2F;include&#x2F;c++&#x2F;4.2.1</span><br><span class="line">Apple LLVM version 10.0.1 (clang-1001.0.46.4)</span><br><span class="line">Target: x86_64-apple-darwin18.5.0</span><br><span class="line">Thread model: posix</span><br><span class="line">InstalledDir: &#x2F;Applications&#x2F;Xcode.app&#x2F;Contents&#x2F;Developer&#x2F;Toolchains&#x2F;XcodeDefault.xctoolchain&#x2F;usr&#x2F;bin</span><br></pre></td></tr></table></figure>
+<p>如何解决呢？最方便的就是 <code>brew install gcc</code>。在此之前请一定检查自己是否下载过 CLT ，我没有预先下载 CLT，导致自己电脑从源下载，并且自己跑编译，CPU 瞬间 100% 占用，烫的可以煎鸡蛋才发现异常（。<br/></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;work$ brew config</span><br><span class="line"></span><br><span class="line">macOS: 10.14.4-x86_64</span><br><span class="line">CLT: N&#x2F;A</span><br><span class="line">Xcode: 10.2.1</span><br></pre></td></tr></table></figure>
+<p>CLT: N/A，于是要使用 <code>xcode-select --install</code> 命令来下载，苹果 CDN 很迷，请关闭全局梯子。<br/></p>
+<p>终于下载好啦，我们应该使用什么命令编译呢？显然不是 g++ main.cpp -o main，因为不管是 gcc 还是 g++ 这个名字已经被占用了。<br/></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">~&#x2F;work$  ls -l &#x2F;usr&#x2F;local&#x2F;bin  |  grep g++                               </span><br><span class="line"></span><br><span class="line">lrwxr-xr-x  1 qianqian  admin        31 May  6 19:45 g++-8 -&gt; ..&#x2F;Cellar&#x2F;gcc&#x2F;8.3.0_2&#x2F;bin&#x2F;g++-8</span><br><span class="line">lrwxr-xr-x  1 qianqian  admin        53 May  6 19:45 x86_64-apple-darwin18-g++-8 -&gt; ..&#x2F;Cellar&#x2F;gcc&#x2F;8.3.0_2&#x2F;bin&#x2F;x86_64-apple-darwin18-g++-8</span><br></pre></td></tr></table></figure>
+<p>所以改成  <code>g++-8 x.cpp -o x</code> 即可啦w</p>
 
                 
                 <hr>
@@ -426,15 +433,6 @@
                 
 
                 
-                    <li>
-                        <a target="_blank" href="https://twitter.com/wwyqianqian">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                
 
                 
 
@@ -566,6 +564,21 @@
     
         <script src="/js/ribbonDynamic.js"></script>
     
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 </body>
 
 </html>
