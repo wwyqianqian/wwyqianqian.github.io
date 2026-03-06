@@ -4,6 +4,37 @@
   
     
     <entry>
+      <title>赛博驯兽纪实：如何在 Mac 上从零调教一个 7x24 的本地 AI 助理 (OpenClaw)</title>
+      <link href="/2026/03/06/qian-openclaw/"/>
+      <url>/2026/03/06/qian-openclaw/</url>
+      
+        <content type="html"><![CDATA[<h1>赛博驯兽纪实：如何在 Mac 上从零调教一个 7x24 的本地 AI 助理 (OpenClaw)</h1><p>最近折腾了 OpenClaw，试图在我的 MacBook 上部署一个能真正触碰系统底层、帮我处理邮件和待办的 7x24 小时 AI 助理（我管它叫 🦞）。</p><p>理想很丰满，现实很骨感。大模型虽然聪明，但如果不加管束，它们会产生严重的幻觉，甚至为了交差而“撒谎”。这篇文章记录了我在这两天排雷的全部技术细节，送给同样在折腾 OpenClaw 的你。</p><hr><h2 id="阶段一：打通-Google-Workspace-Gmail-的权限壁垒">阶段一：打通 Google Workspace (Gmail) 的权限壁垒</h2><p>想让 AI 帮你读邮件，必须配置 gog 工具并进行 OAuth 授权。</p><h3 id="1-基础配置命令">1. 基础配置命令</h3><p>去 Google Cloud Console 下载好 client_secret.json 后，在终端执行：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 1. 导入凭据</span><br><span class="line">gog auth credentials &#x2F;path&#x2F;to&#x2F;your&#x2F;client_secret.json</span><br><span class="line"></span><br><span class="line"># 2. 绑定账户并专门请求 Gmail 权限</span><br><span class="line">gog auth add your_email@gmail.com --services gmail</span><br></pre></td></tr></table></figure><p>⚠️ <strong>避坑指南：Error 403 (Access Denied)</strong><br>在执行第二步时，如果浏览器弹窗报错 未完成 Google 验证程序 (Error 403)，不要慌。</p><p><strong>原因</strong>：你的 Google Cloud 项目处于“测试阶段 (Testing)”，拦截了未经授权的邮箱。</p><p><strong>解法</strong>：回到 Google Cloud 后台 -&gt; 左侧菜单找 OAuth 同意屏幕 (或“目标对象/Audience”) -&gt; 往下翻找到 测试用户 (Test users) -&gt; 把你的邮箱手动 Add 进去。再次执行命令即可成功。</p><p><strong>关键点</strong>：授权时务必在网页上勾选 “查看您的电子邮件”，否则 AI 依然会报读写错误。</p><h2 id="阶段二：打破-AI-幻觉，用-AppleScript-强控-Mac-提醒事项">阶段二：打破 AI 幻觉，用 AppleScript 强控 Mac 提醒事项</h2><p>这是我踩过最深的坑。当我让 AI 把邮件总结写进 Mac 自带的「提醒事项 (Apple Reminders)」时，它满口答应，甚至在对话框里输出了进度条。但打开 App 一看，空空如也。</p><p><strong>为什么会这样？</strong><br>因为 AI 遭遇了 API Rate Limit（调用频率限制）。当它的思考过程被阻断时，它会触发“幻觉”，直接跳过系统命令的执行，强行给你返回一个编造的成功结果（它甚至自己编了一个 macOS 根本不存在的 <code>remindctl</code> 命令）。</p><p><strong>解决办法</strong>：强行指定底层命令<br>必须在 Prompt 里用铁血纪律锁死它的执行路径，强制它使用 macOS 原生的 <code>osascript</code> (AppleScript)。</p><p><strong>正确的 AppleScript 语法</strong>：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">osascript -e <span class="string">'tell application "Reminders" to make new reminder with properties &#123;name:"你的任务名称"&#125;'</span></span><br></pre></td></tr></table></figure><p>⚠️ <strong>避坑指南：语法与权限地狱</strong><br><strong>权限弹窗</strong>：第一次执行上述命令时，macOS 会弹窗警告 <code>node wants access to control &quot;Reminders&quot;</code>。必须点击允许 (Allow)，否则终端会一直报 <code>code: 23</code> (权限拒绝)。</p><p><strong>AppleScript 语法报错 (-2740)</strong>：AI 会自作聪明地使用 <code>todo item</code>，这会触发语法错误。必须纠正它使用 <code>reminder</code>。</p><p><strong>幽灵日期（2011年 bug）</strong>：AI 可能会强行给任务加上它自己捏造的日期格式（如 <code>due date:date &quot;2026-03-06 21:00:00&quot;</code>）。这会导致解析回退，让你的任务被归档到遥远的 2011 年。<strong>对策</strong>：明确禁止它写入日期参数，只保留 <code>name</code> 属性。</p><h2 id="阶段三：自动化落地，Cron-定时任务的最佳实践">阶段三：自动化落地，Cron 定时任务的最佳实践</h2><p>不要让大模型自己去“思考”怎么设置系统闹钟！这会瞬间榨干你的 API 额度，导致满屏的 <code>API rate limit reached</code> 报错。</p><p>OpenClaw 自身内置了强大的底层调度器。我们要用原生的 CLI 命令，把任务像钉钉子一样钉死在系统的 <code>jobs.json</code> 里。</p><p><strong>终极晨间自动化咒语</strong><br>在终端（以每天早上 10:00 为例）执行以下代码，构建 7x24 的闭环：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">openclaw cron add \</span><br><span class="line"> --name <span class="string">"每日晨间自动化例程"</span> \</span><br><span class="line"> --cron <span class="string">"0 10 * * *"</span> \</span><br><span class="line"> --tz <span class="string">"Asia/Hong_Kong"</span> \</span><br><span class="line"> --session main \</span><br><span class="line"> --system-event <span class="string">"提醒：现在是早上10:00。请立即执行晨间例程：1. 调用 gog 工具读取我过去24小时的新邮件并提炼核心摘要。2. 识别待办任务，并严格使用 osascript -e 'tell application \"Reminders\" to make new reminder with properties &#123;name:\"任务名称\"&#125;' 写入我的 Apple Reminders。⚠️警告：绝对不允许在 properties 中添加 due date 或任何时间参数！只能有 name 属性！全程汇报进度，绝不允许伪造执行结果。"</span> \</span><br><span class="line"> --wake now</span><br></pre></td></tr></table></figure><p><strong>关于耗电与断网的思考</strong><br><strong>耗电吗？</strong> 不耗电。系统底层每 60 秒做一次轻量级轮询（Polling），对 CPU 和电池的消耗近乎为零。不要一直开着 <code>openclaw logs --follow</code> 监视它，关掉终端让它静默运行即可。</p><p><strong>如果 10:00 电脑断网了怎么办？</strong> 任务会准时触发，但由于无法请求大模型 API 和连网获取邮件，程序会触发 Fail Fast（快速失败）并终止当前任务，绝不会卡死电脑。它会安静地等待明天的 10:00 再次执行。</p><h2 id="总结">总结</h2><p>调教 AI 助理就像是在给一个极其聪明但喜欢偷懒的员工立规矩。不要相信它的甜言蜜语，去看终端的 log，去限制它的权限，去规定它使用的底层语法。当规则足够严密时，它就会成为你最得力的 7x24 小时赛博助理。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术分享 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+            <tag> OpenClaw </tag>
+            
+            <tag> Mac </tag>
+            
+            <tag> 自动化 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我的 SPA 身体精油与香氛疗愈记录</title>
       <link href="/2026/03/05/My-Spa/"/>
       <url>/2026/03/05/My-Spa/</url>

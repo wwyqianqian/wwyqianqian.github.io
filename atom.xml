@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2026-03-06T02:13:17.279Z</updated>
+  <updated>2026-03-06T15:19:08.146Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>赛博驯兽纪实：如何在 Mac 上从零调教一个 7x24 的本地 AI 助理 (OpenClaw)</title>
+    <link href="https://wwyqianqian.github.io/2026/03/06/qian-openclaw/"/>
+    <id>https://wwyqianqian.github.io/2026/03/06/qian-openclaw/</id>
+    <published>2026-03-06T15:18:00.000Z</published>
+    <updated>2026-03-06T15:19:08.146Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1&gt;赛博驯兽纪实：如何在 Mac 上从零调教一个 7x24 的本地 AI 助理 (OpenClaw)&lt;/h1&gt;
+&lt;p&gt;最近折腾了 OpenClaw，试图在我的 MacBook 上部署一个能真正触碰系统底层、帮我处理邮件和待办的 7x24 小时 AI 助理（我管它叫</summary>
+        
+      
+    
+    
+    
+    <category term="技术分享" scheme="https://wwyqianqian.github.io/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="AI" scheme="https://wwyqianqian.github.io/tags/AI/"/>
+    
+    <category term="OpenClaw" scheme="https://wwyqianqian.github.io/tags/OpenClaw/"/>
+    
+    <category term="Mac" scheme="https://wwyqianqian.github.io/tags/Mac/"/>
+    
+    <category term="自动化" scheme="https://wwyqianqian.github.io/tags/%E8%87%AA%E5%8A%A8%E5%8C%96/"/>
+    
+  </entry>
   
   <entry>
     <title>我的 SPA 身体精油与香氛疗愈记录</title>
@@ -537,32 +569,6 @@
     
     
     <category term="fish shell" scheme="https://wwyqianqian.github.io/tags/fish-shell/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Xperia XZ Premium</title>
-    <link href="https://wwyqianqian.github.io/2017/12/10/Xperia-XZ-Premium/"/>
-    <id>https://wwyqianqian.github.io/2017/12/10/Xperia-XZ-Premium/</id>
-    <published>2017-12-10T11:39:15.000Z</published>
-    <updated>2022-01-06T11:48:20.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;引子：这个月初，千千找欣欣帮忙，入了港版索尼的 XZP，到手裸奔玩了半天后，决定要给这个 4k 镜子配一些外壳、转换插头和贴膜。这篇文章主要是说 XZP 贴膜的事情。&lt;/p&gt;
-&lt;p&gt;因为是被人说成「小众？」的手机，我们几乎不可能会在路边或者街边店铺里，随便找人花 20￥</summary>
-        
-      
-    
-    
-    
-    <category term="碎碎念" scheme="https://wwyqianqian.github.io/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
-    
-    
-    <category term="Sony" scheme="https://wwyqianqian.github.io/tags/Sony/"/>
     
   </entry>
   
