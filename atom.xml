@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2026-03-10T08:47:56.846Z</updated>
+  <updated>2026-03-10T08:57:12.118Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://wwyqianqian.github.io/2026/03/10/my-open-claw-Cheatsheet/"/>
     <id>https://wwyqianqian.github.io/2026/03/10/my-open-claw-Cheatsheet/</id>
     <published>2026-03-10T08:47:28.000Z</published>
-    <updated>2026-03-10T08:47:56.846Z</updated>
+    <updated>2026-03-10T08:57:12.118Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;作为日常重度使用 OpenClaw 的记录，这里整理了一份核心组件、命令清单以及配置备忘录（Cheatsheet），方便随用随查。&lt;/p&gt;
-&lt;h2 id=&quot;⚠️-核心监控（API-计费与限流）&quot;&gt;⚠️ 核心监控（API 计费与限流）&lt;/h2&gt;
-&lt;p&gt;由于底层严重依赖</summary>
+    <summary type="html">&lt;p&gt;这是日常重度使用 OpenClaw 的记录。这里整理了一份核心组件、命令清单以及配置备忘录，方便随用随查。&lt;/p&gt;
+&lt;h2 id=&quot;核心监控（API-计费与限流）&quot;&gt;核心监控（API 计费与限流）&lt;/h2&gt;
+&lt;p&gt;由于底层依赖 Google 生态，特别是 Gemini</summary>
         
       
     

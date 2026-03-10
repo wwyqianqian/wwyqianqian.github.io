@@ -120,8 +120,8 @@
                         
                             <div class="blank_box"></div>
                             <span class="meta">
-                                Words <span class="post-count">979</span> and
-                                Reading Time <span class="post-count">4</span> Minutes
+                                Words <span class="post-count">973</span> and
+                                Reading Time <span class="post-count">3</span> Minutes
                             </span>
                             <div class="blank_box"></div>
                             <!-- 不蒜子统计 start -->
@@ -260,15 +260,15 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>作为日常重度使用 OpenClaw 的记录，这里整理了一份核心组件、命令清单以及配置备忘录（Cheatsheet），方便随用随查。</p>
-<h2 id="⚠️-核心监控（API-计费与限流）">⚠️ 核心监控（API 计费与限流）</h2>
-<p>由于底层严重依赖 Google 生态（Gemini API），务必时刻盯紧这两个入口保平安：</p>
+                <p>这是日常重度使用 OpenClaw 的记录。这里整理了一份核心组件、命令清单以及配置备忘录，方便随用随查。</p>
+<h2 id="核心监控（API-计费与限流）">核心监控（API 计费与限流）</h2>
+<p>由于底层依赖 Google 生态，特别是 Gemini API，需要时刻关注这两个核心指标：</p>
 <ul>
 <li><strong>API 计费状态 (Billing)</strong>：<a href="https://console.cloud.google.com/billing" target="_blank" rel="noopener">Google Cloud Console - Billing</a></li>
 <li><strong>API 速率限制与调用量 (Rate Limits)</strong>：<a href="https://aistudio.google.com/app/rate-limit?timeRange=last-1-day" target="_blank" rel="noopener">AI Studio Rate Limit</a></li>
 </ul>
 <hr>
-<h2 id="🚀-快速安装与初始化">🚀 快速安装与初始化</h2>
+<h2 id="快速安装与初始化">快速安装与初始化</h2>
 <p><strong>安装环境</strong>（依赖 Node 22+）：</p>
 <ul>
 <li><strong>macOS / Linux</strong>: <code>curl -fsSL https://openclaw.ai/install.sh | bash</code></li>
@@ -276,36 +276,36 @@
 </ul>
 <p><strong>首次配置</strong>：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">openclaw onboard --install-daemon</span><br><span class="line">openclaw gateway status</span><br><span class="line">openclaw dashboard</span><br></pre></td></tr></table></figure>
-<h2 id="🧠-核心概念-Key-Concepts">🧠 核心概念 (Key Concepts)</h2>
+<h2 id="核心概念-Key-Concepts">核心概念 (Key Concepts)</h2>
 <ul>
 <li><strong>Gateway</strong>: 核心守护进程，负责在 Channels 和 Agents 之间路由消息。</li>
-<li><strong>Channels</strong>: 消息平台通道（如 WhatsApp, Telegram, Discord, iMessage, Feishu 等）。</li>
+<li><strong>Channels</strong>: 消息平台通道，如 WhatsApp, Telegram, Discord, iMessage, Feishu 等。</li>
 <li><strong>Sessions</strong>: 每个聊天会话或群组的独立对话上下文。</li>
-<li><strong>Agents</strong>: 拥有独立工作区和记忆的 AI 人格实体。</li>
-<li><strong>Skills</strong>: 可插拔的能力和工作流插件（如 GitHub, Calendar 等）。</li>
+<li><strong>Agents</strong>: 拥有独立工作区和记忆的 AI 实体。</li>
+<li><strong>Skills</strong>: 可插拔的能力和工作流插件，如 GitHub, Calendar 等。</li>
 <li><strong>Nodes</strong>: 已经配对的移动设备或远程设备终端。</li>
 <li><strong>Canvas</strong>: 在 Nodes 上渲染的 UI 界面视图。</li>
 <li><strong>Cron</strong>: Agent 自动运行的定时调度任务。</li>
 <li><strong>Memory</strong>: 跨 Session 的持久化上下文记忆。</li>
 </ul>
-<h2 id="📂-工作区配置文件-Workspace-Files">📂 工作区配置文件 (Workspace Files)</h2>
-<p>Agent 的行为准则和长短期记忆都在这些文件里：</p>
+<h2 id="工作区配置文件-Workspace-Files">工作区配置文件 (Workspace Files)</h2>
+<p>Agent 的行为准则和长短期记忆记录在以下文件：</p>
 <ul>
-<li><code>SOUL.md</code>: 设定 Agent 的人格、基调与沟通边界。</li>
-<li><code>USER.md</code>: 记录人类主人的基本信息与操作偏好。</li>
-<li><code>AGENTS.md</code>: 工作区约定俗成的 SOP 规矩与系统初始化要求。</li>
-<li><code>TOOLS.md</code>: 本地工具箱备忘录（最高优先级执行 SOP）。</li>
+<li><code>SOUL.md</code>: 设定 Agent 的基调与沟通边界。</li>
+<li><code>USER.md</code>: 记录使用者的基本信息与操作偏好。</li>
+<li><code>AGENTS.md</code>: 工作区约定俗成的系统初始化要求与规范。</li>
+<li><code>TOOLS.md</code>: 本地工具箱备忘录，享有最高优先级执行指令。</li>
 <li><code>HEARTBEAT.md</code>: Agent 定期检查或轮询的任务清单。</li>
-<li><code>MEMORY.md</code>: 经过提炼的长期核心记忆。</li>
-<li><code>memory/YYYY-MM-DD.md</code>: 每日行为的 Raw 原始日志。</li>
+<li><code>MEMORY.md</code>: 提炼后的长期核心记忆。</li>
+<li><code>memory/YYYY-MM-DD.md</code>: 每日行为的原始日志。</li>
 </ul>
-<h2 id="💻-常用命令字典-Commands">💻 常用命令字典 (Commands)</h2>
+<h2 id="常用命令字典-Commands">常用命令字典 (Commands)</h2>
 <h3 id="守护进程-Gateway">守护进程 (Gateway)</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">openclaw gateway status       <span class="comment"># 查看守护进程状态</span></span><br><span class="line">openclaw gateway start        <span class="comment"># 启动</span></span><br><span class="line">openclaw gateway stop         <span class="comment"># 停止</span></span><br><span class="line">openclaw gateway restart      <span class="comment"># 重启</span></span><br><span class="line">openclaw gateway --port 18789 <span class="comment"># 以前台模式启动并指定端口</span></span><br></pre></td></tr></table></figure>
 <h3 id="平台对接-Channels-消息传递-Messaging">平台对接 (Channels) &amp; 消息传递 (Messaging)</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openclaw channels list        <span class="comment"># 列出支持/已配置的渠道</span></span><br><span class="line">openclaw channels add         <span class="comment"># 新增渠道配置</span></span><br><span class="line">openclaw channels status      <span class="comment"># 查看各渠道连接状态</span></span><br><span class="line">openclaw message send --target +15555550123 --message <span class="string">"Hello"</span> <span class="comment"># 直接发送消息</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openclaw channels list        <span class="comment"># 列出支持或已配置的渠道</span></span><br><span class="line">openclaw channels add         <span class="comment"># 新增渠道配置</span></span><br><span class="line">openclaw channels status      <span class="comment"># 查看各渠道连接状态</span></span><br><span class="line">openclaw message send --target +15555550123 --message <span class="string">"Hello"</span> <span class="comment"># 直接发送消息</span></span><br></pre></td></tr></table></figure>
 <h3 id="模型与鉴权-Models">模型与鉴权 (Models)</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openclaw models list          <span class="comment"># 查看可用模型列表</span></span><br><span class="line">openclaw models status        <span class="comment"># 查看模型运行状态</span></span><br><span class="line">openclaw models <span class="built_in">set</span> MODEL     <span class="comment"># 切换默认模型</span></span><br><span class="line">openclaw models auth add      <span class="comment"># 添加模型对应的 API Auth 鉴权</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">openclaw models list          <span class="comment"># 查看可用模型列表</span></span><br><span class="line">openclaw models status        <span class="comment"># 查看模型运行状态</span></span><br><span class="line">openclaw models <span class="built_in">set</span> MODEL     <span class="comment"># 切换默认模型</span></span><br><span class="line">openclaw models auth add      <span class="comment"># 添加模型对应的 API 鉴权</span></span><br></pre></td></tr></table></figure>
 <h3 id="会话与-Agent-管理-Sessions-Agents">会话与 Agent 管理 (Sessions &amp; Agents)</h3>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">openclaw sessions             <span class="comment"># 查看当前所有会话</span></span><br><span class="line">openclaw status               <span class="comment"># 系统全局状态概览</span></span><br><span class="line">openclaw agents list          <span class="comment"># 查看本地所有的 Agents</span></span><br><span class="line">openclaw agents add           <span class="comment"># 新增 Agent</span></span><br><span class="line">openclaw agent                <span class="comment"># 进入单 Agent 的特定管理</span></span><br></pre></td></tr></table></figure>
 <h3 id="技能与定时任务-Skills-Cron">技能与定时任务 (Skills &amp; Cron)</h3>
@@ -323,7 +323,7 @@
 <li><code>--json</code>: 强制输出为机器可读的 JSON 格式。</li>
 <li><code>-V</code> 或 <code>--version</code>: 打印当前运行版本。</li>
 </ul>
-<h2 id="🌐-社区与扩展生态">🌐 社区与扩展生态</h2>
+<h2 id="社区与扩展生态">社区与扩展生态</h2>
 <ul>
 <li><strong>官方文档</strong>: <a href="https://docs.openclaw.ai" target="_blank" rel="noopener">docs.openclaw.ai</a></li>
 <li><strong>源码 GitHub</strong>: <a href="https://github.com/openclaw/openclaw" target="_blank" rel="noopener">openclaw/openclaw</a></li>
@@ -395,7 +395,7 @@
           <strong class="toc-title">Contents</strong>
           
             
-              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#⚠️-核心监控（API-计费与限流）"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">⚠️ 核心监控（API 计费与限流）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#🚀-快速安装与初始化"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">🚀 快速安装与初始化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#🧠-核心概念-Key-Concepts"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">🧠 核心概念 (Key Concepts)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#📂-工作区配置文件-Workspace-Files"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">📂 工作区配置文件 (Workspace Files)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#💻-常用命令字典-Commands"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">💻 常用命令字典 (Commands)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#守护进程-Gateway"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">守护进程 (Gateway)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#平台对接-Channels-消息传递-Messaging"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">平台对接 (Channels) &amp; 消息传递 (Messaging)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#模型与鉴权-Models"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">模型与鉴权 (Models)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#会话与-Agent-管理-Sessions-Agents"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">会话与 Agent 管理 (Sessions &amp; Agents)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技能与定时任务-Skills-Cron"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">技能与定时任务 (Skills &amp; Cron)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#节点与记忆-Nodes-Memory"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">节点与记忆 (Nodes &amp; Memory)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#实用运维诊断-Useful-Commands"><span class="toc-nav-number">5.7.</span> <span class="toc-nav-text">实用运维诊断 (Useful Commands)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#全局参数-Global-Flags"><span class="toc-nav-number">5.8.</span> <span class="toc-nav-text">全局参数 (Global Flags)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#🌐-社区与扩展生态"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">🌐 社区与扩展生态</span></a></li></ol>
+              <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#核心监控（API-计费与限流）"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">核心监控（API 计费与限流）</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#快速安装与初始化"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">快速安装与初始化</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#核心概念-Key-Concepts"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">核心概念 (Key Concepts)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#工作区配置文件-Workspace-Files"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">工作区配置文件 (Workspace Files)</span></a></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#常用命令字典-Commands"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">常用命令字典 (Commands)</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#守护进程-Gateway"><span class="toc-nav-number">5.1.</span> <span class="toc-nav-text">守护进程 (Gateway)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#平台对接-Channels-消息传递-Messaging"><span class="toc-nav-number">5.2.</span> <span class="toc-nav-text">平台对接 (Channels) &amp; 消息传递 (Messaging)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#模型与鉴权-Models"><span class="toc-nav-number">5.3.</span> <span class="toc-nav-text">模型与鉴权 (Models)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#会话与-Agent-管理-Sessions-Agents"><span class="toc-nav-number">5.4.</span> <span class="toc-nav-text">会话与 Agent 管理 (Sessions &amp; Agents)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#技能与定时任务-Skills-Cron"><span class="toc-nav-number">5.5.</span> <span class="toc-nav-text">技能与定时任务 (Skills &amp; Cron)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#节点与记忆-Nodes-Memory"><span class="toc-nav-number">5.6.</span> <span class="toc-nav-text">节点与记忆 (Nodes &amp; Memory)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#实用运维诊断-Useful-Commands"><span class="toc-nav-number">5.7.</span> <span class="toc-nav-text">实用运维诊断 (Useful Commands)</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#全局参数-Global-Flags"><span class="toc-nav-number">5.8.</span> <span class="toc-nav-text">全局参数 (Global Flags)</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-2"><a class="toc-nav-link" href="#社区与扩展生态"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">社区与扩展生态</span></a></li></ol>
             
           
           </div>
