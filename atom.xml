@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2026-03-06T15:19:08.146Z</updated>
+  <updated>2026-03-10T08:47:56.846Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>my open claw Cheatsheet</title>
+    <link href="https://wwyqianqian.github.io/2026/03/10/my-open-claw-Cheatsheet/"/>
+    <id>https://wwyqianqian.github.io/2026/03/10/my-open-claw-Cheatsheet/</id>
+    <published>2026-03-10T08:47:28.000Z</published>
+    <updated>2026-03-10T08:47:56.846Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;作为日常重度使用 OpenClaw 的记录，这里整理了一份核心组件、命令清单以及配置备忘录（Cheatsheet），方便随用随查。&lt;/p&gt;
+&lt;h2 id=&quot;⚠️-核心监控（API-计费与限流）&quot;&gt;⚠️ 核心监控（API 计费与限流）&lt;/h2&gt;
+&lt;p&gt;由于底层严重依赖</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>赛博驯兽纪实：如何在 Mac 上从零调教一个 7x24 的本地 AI 助理 (OpenClaw)</title>
@@ -543,32 +566,6 @@
     
     
     <category term="Web crawler" scheme="https://wwyqianqian.github.io/tags/Web-crawler/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Fish shell</title>
-    <link href="https://wwyqianqian.github.io/2018/04/30/Fish-shell/"/>
-    <id>https://wwyqianqian.github.io/2018/04/30/Fish-shell/</id>
-    <published>2018-04-30T12:24:12.000Z</published>
-    <updated>2022-01-06T12:53:54.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;很扯淡的前言：本文是一篇很随意、很爆笑的文章。大概是前几天一个晚上，杰哥唐突说：“没有配置过的 zsh 就是 shit，甚至不如 bash，如果使用的是没有配置过的 zsh，那么你的人生令人难过，我是佛祖 我拯救你</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
-    
-    
-    <category term="fish shell" scheme="https://wwyqianqian.github.io/tags/fish-shell/"/>
     
   </entry>
   
