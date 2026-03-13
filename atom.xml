@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2026-03-10T09:24:23.340Z</updated>
+  <updated>2026-03-13T03:13:11.629Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>京都松荣堂「芳轮」系列全测评：被香港物价背刺后的入坑指南</title>
+    <link href="https://wwyqianqian.github.io/2026/03/13/shoyeido/"/>
+    <id>https://wwyqianqian.github.io/2026/03/13/shoyeido/</id>
+    <published>2026-03-13T03:12:46.000Z</published>
+    <updated>2026-03-13T03:13:11.629Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近沉迷于在家里点线香。看着轻烟袅袅升起，原本狭小的空间仿佛瞬间被拉伸，焦躁的心情也能跟着慢慢沉淀下来。&lt;/p&gt;
+&lt;p&gt;不过，入坑的第一课，竟然是被香港的物价狠狠上了一课。&lt;/p&gt;
+&lt;p&gt;前阵子在铜锣湾 SOGO</summary>
+        
+      
+    
+    
+    
+    <category term="Lifestyle" scheme="https://wwyqianqian.github.io/categories/Lifestyle/"/>
+    
+    
+    <category term="香道" scheme="https://wwyqianqian.github.io/tags/%E9%A6%99%E9%81%93/"/>
+    
+    <category term="松荣堂" scheme="https://wwyqianqian.github.io/tags/%E6%9D%BE%E8%8D%A3%E5%A0%82/"/>
+    
+    <category term="居家生活" scheme="https://wwyqianqian.github.io/tags/%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="好物分享" scheme="https://wwyqianqian.github.io/tags/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
   
   <entry>
     <title>my open claw Cheatsheet</title>
@@ -550,32 +583,6 @@
     <category term="gcc" scheme="https://wwyqianqian.github.io/tags/gcc/"/>
     
     <category term="macOS" scheme="https://wwyqianqian.github.io/tags/macOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python3 web crawler zhihu</title>
-    <link href="https://wwyqianqian.github.io/2019/02/13/Python3-web-crawler-zhihu/"/>
-    <id>https://wwyqianqian.github.io/2019/02/13/Python3-web-crawler-zhihu/</id>
-    <published>2019-02-13T02:01:52.000Z</published>
-    <updated>2022-01-06T12:05:35.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;免责声明：本项目代码遵循 &lt;code&gt;robots.txt&lt;/code&gt; 协议，并仅供个人学习 python 使用，且无实际用处。&lt;/p&gt;
-&lt;p&gt;这个迫真爬虫是年前用了和 req-ccnu 一样的方法写的（api + 模拟登陆），他们都有一个特点，就是处理 curl</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="https://wwyqianqian.github.io/categories/Python/"/>
-    
-    
-    <category term="Web crawler" scheme="https://wwyqianqian.github.io/tags/Web-crawler/"/>
     
   </entry>
   
