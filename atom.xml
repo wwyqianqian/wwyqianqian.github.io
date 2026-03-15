@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2026-03-13T03:26:31.489Z</updated>
+  <updated>2026-03-15T15:36:55.811Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Perfumer H 沙龙香 VS Bamford 精油</title>
+    <link href="https://wwyqianqian.github.io/2026/03/15/Perfumer-H-%E6%B2%99%E9%BE%99%E9%A6%99-VS-Bamford-%E7%B2%BE%E6%B2%B9/"/>
+    <id>https://wwyqianqian.github.io/2026/03/15/Perfumer-H-%E6%B2%99%E9%BE%99%E9%A6%99-VS-Bamford-%E7%B2%BE%E6%B2%B9/</id>
+    <published>2026-03-15T15:36:33.000Z</published>
+    <updated>2026-03-15T15:36:55.811Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这个周末我基本泡在湾仔的日、月、星街。这里的街区氛围很好，藏着不少香氛店、咖啡馆和买手店。之前因为国泰航空的备品认识了 Bamford 并在这里入手，昨天又在这片区域逛到了 Perfumer</summary>
+        
+      
+    
+    
+    
+    <category term="Lifestyle" scheme="https://wwyqianqian.github.io/categories/Lifestyle/"/>
+    
+    
+    <category term="身体护理" scheme="https://wwyqianqian.github.io/tags/%E8%BA%AB%E4%BD%93%E6%8A%A4%E7%90%86/"/>
+    
+    <category term="居家生活" scheme="https://wwyqianqian.github.io/tags/%E5%B1%85%E5%AE%B6%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="好物分享" scheme="https://wwyqianqian.github.io/tags/%E5%A5%BD%E7%89%A9%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="香水" scheme="https://wwyqianqian.github.io/tags/%E9%A6%99%E6%B0%B4/"/>
+    
+  </entry>
   
   <entry>
     <title>京都松荣堂「芳轮」系列全测评：被香港物价背刺后的入坑指南</title>
@@ -555,34 +586,6 @@
     
     
     <category term="proxy server" scheme="https://wwyqianqian.github.io/tags/proxy-server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Use real gcc on macOS</title>
-    <link href="https://wwyqianqian.github.io/2019/05/06/Use-real-gcc-on-macOS/"/>
-    <id>https://wwyqianqian.github.io/2019/05/06/Use-real-gcc-on-macOS/</id>
-    <published>2019-05-06T12:51:59.000Z</published>
-    <updated>2022-01-06T11:41:01.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;今天编译一段带有 &lt;code&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;/code&gt; 这样一个头文件的 c++ 代码时，遇到了报错 &lt;br/&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
-    
-    
-    <category term="gcc" scheme="https://wwyqianqian.github.io/tags/gcc/"/>
-    
-    <category term="macOS" scheme="https://wwyqianqian.github.io/tags/macOS/"/>
     
   </entry>
   
