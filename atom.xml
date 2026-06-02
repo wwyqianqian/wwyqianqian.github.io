@@ -6,7 +6,7 @@
   <link href="https://wwyqianqian.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwyqianqian.github.io/"/>
-  <updated>2026-03-15T15:52:57.395Z</updated>
+  <updated>2026-06-02T07:14:58.653Z</updated>
   <id>https://wwyqianqian.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的 Rime 鼠须管配置</title>
+    <link href="https://wwyqianqian.github.io/2026/06/02/%E6%88%91%E7%9A%84-Rime-%E9%BC%A0%E9%A1%BB%E7%AE%A1%E9%85%8D%E7%BD%AE/"/>
+    <id>https://wwyqianqian.github.io/2026/06/02/%E6%88%91%E7%9A%84-Rime-%E9%BC%A0%E9%A1%BB%E7%AE%A1%E9%85%8D%E7%BD%AE/</id>
+    <published>2026-06-02T07:14:35.000Z</published>
+    <updated>2026-06-02T07:14:58.653Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;记录一下当前的 Rime (鼠须管) 配置，防止以后忘记。&lt;/p&gt;
+&lt;h2 id=&quot;推荐的迁移方式&quot;&gt;推荐的迁移方式&lt;/h2&gt;
+&lt;p&gt;换电脑时，最稳妥和高效的做法是直接打包迁移整个 &lt;code&gt;~/Library/Rime&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Perfumer H 沙龙香 VS Bamford 精油</title>
@@ -560,33 +583,6 @@
     <category term="STEM" scheme="https://wwyqianqian.github.io/tags/STEM/"/>
     
     <category term="Gender equality" scheme="https://wwyqianqian.github.io/tags/Gender-equality/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>V2RayX</title>
-    <link href="https://wwyqianqian.github.io/2019/05/07/V2RayX/"/>
-    <id>https://wwyqianqian.github.io/2019/05/07/V2RayX/</id>
-    <published>2019-05-07T15:28:22.000Z</published>
-    <updated>2022-07-04T12:57:19.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;碎碎念&quot;&gt;碎碎念&lt;/h3&gt;
-&lt;p&gt;还有一个多小时就是 2019 Google I/O 大会了，不得不感叹时间过的好快。五月谷歌，六月苹果，年复一年，技术不长反退，人也懒散起来。只好整理心情水水博客找点事情做。&lt;br/&gt;&lt;br&gt;
-两年前看好友 &lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="Linux" scheme="https://wwyqianqian.github.io/categories/Linux/"/>
-    
-    
-    <category term="proxy server" scheme="https://wwyqianqian.github.io/tags/proxy-server/"/>
     
   </entry>
   
